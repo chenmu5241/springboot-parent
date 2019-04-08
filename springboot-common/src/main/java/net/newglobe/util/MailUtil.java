@@ -8,8 +8,9 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -17,8 +18,26 @@ public class MailUtil {
 
 	@Autowired
 	private SysConfig sysConfig;
-
+	@Autowired
+	private JavaMailSender mailSender;
+	
+	
 	public boolean sendSms(String receiveMail, String title, String content) {
+		try {
+			SimpleMailMessage message = new SimpleMailMessage();
+			message.setFrom(sysConfig.getMailFrom());
+			message.setTo(receiveMail);
+			message.setSubject(title);
+			message.setText(content);
+			mailSender.send(message);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+		return true;
+	}
+
+	public boolean sendSms2(String receiveMail, String title, String content) {
 		try {
 			// 1. 创建参数配置, 用于连接邮件服务器的参数配置
 			Properties props = new Properties(); // 参数配置

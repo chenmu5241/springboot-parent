@@ -24,6 +24,7 @@ public class HomeController {
 	
 	@RequestMapping("home")
 	public String index(HttpServletRequest request) {
+		System.out.println("nihao");
 		SysAccount sysAccount = (SysAccount) SecurityUtils.getSubject().getPrincipal();
 		return "home";
 	}

@@ -53,6 +53,8 @@ public class SysConfig {
 	private String mailPassword;
 	@Value("${mail.smtp}")
 	private String mailSmtp;
+	@Value("${spring.mail.username}")
+	private String mailFrom;
 
 	/**
 	 * 初始化，或者更新配置参数
@@ -161,4 +163,7 @@ public class SysConfig {
 		return mailSmtp;
 	}
 
+	public String getMailFrom() {
+		return mailFrom;
+	}
 }

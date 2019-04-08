@@ -21,6 +21,11 @@ public class DemoController {
 		return "app/demo/"+path;
 	}
 	
+	@RequestMapping("validate")
+	public void validate() {
+		
+		
+	}
 	
 	
 	
