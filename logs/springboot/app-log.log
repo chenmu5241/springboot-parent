@@ -1,3 +1,5 @@
 11:50:08.137 [main] INFO  SchedulerFactoryBean - Starting Quartz Scheduler now
 11:50:08.177 [main] INFO  ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
 11:50:09.792 [Thread-4] INFO  SchedulerFactoryBean - Shutting down Quartz Scheduler
+18:22:48.942 [main] INFO  SchedulerFactoryBean - Starting Quartz Scheduler now
+18:22:48.962 [main] INFO  ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing

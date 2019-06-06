@@ -9,5 +9,12 @@
   	<module>springboot-common</module>
   	
   	<module>springboot-upload</module>
+  	<module>springboot-cas-center</module>
+  	
+  	
+  	<module>springboot-cas-client1</module>
+  	<module>springboot-cas-client2</module>
+
+  	<module>springboot-jwt</module>
   </modules>
 </project>
