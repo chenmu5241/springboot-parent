@@ -91,4 +91,8 @@ public class JwtHelper {
         return createJWT(map, TOKEN_EXPIRED_TIME);
     }
 
+    
+    public static void main(String[] args) {
+		System.out.println(generateToken("uid",0));
+	}
 }
