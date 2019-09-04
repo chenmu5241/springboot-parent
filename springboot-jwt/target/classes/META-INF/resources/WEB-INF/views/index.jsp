@@ -1,218 +1,242 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@ include file="./util/tlds.jsp"%>
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-		<meta charset="utf-8" />
-		<title>电信产品分析</title>
+<html>
+<head>
+<meta charset="utf-8">
+<title id="title">swagger-ui-layer</title>
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="webjars/layui/css/layui.css">
+<link rel="stylesheet" type="text/css" href="webjars/css/global.css">
+<link rel="stylesheet" type="text/css" href="webjars/css/jquery.json-viewer.css">
+</head>
+<body>
+	<script id="template" type="text/template">
+    <div class="layui-layout layui-layout-admin"
+        style="border-bottom: solid 3px #1aa094;">
+        <div class="layui-header header "> 
+            <div class="layui-main">
+                <div class="admin-login-box logo">
+                        <span>{{:info.title}}<small class="version">{{:info.version}}</small></span>
+                </div>
+            </div>
+        </div>
+        <div class="layui-side layui-bg-black" id="admin-side">
+            <div class="layui-side-scroll" id="admin-navbar-side"
+                lay-filter="side">
+                <ul class="layui-nav layui-nav-tree beg-navbar">
+                    {{for tags itemVar="~tag"}}
+                        {{if name != "basic-error-controller"}}
+                        <li class="layui-nav-item"><a href="javascript:;"><i class="fa fa-cogs" aria-hidden="true" data-icon="fa-cogs"></i>
+                            <cite>{{:name}}</cite><span class="layui-nav-more"></span></a>
+                            <dl class="layui-nav-child">
+                                {{!--获取tags下面对应的方法--}}
+                                {{props ~root.paths itemVar="~path"}}
+                                    {{!--具体方法--}}
+                                    {{props prop}}
+                                        {{if prop.tags[0] == ~tag.name}}
+                                            <dd title="{{:key}} {{:prop.description}}">
+                                                <a href="javascript:;" name="a_path" path="{{:~path.key}}" method="{{:key}}" operationId="{{:prop.operationId}}"><i class="fa fa-navicon" data-icon="fa-navicon"></i><cite class=""><cite class="{{:key}}_font pl10">{{:prop.summary}}</cite></a>
+                                            </dd>
+                                        {{/if}}
+                                    {{/props}}
+                                {{/props}}
+                            </dl>
+                        </li>
+                        {{/if}}
+                    {{/for}}
+				</ul>
+            </div>
+        </div>
+        <div class="layui-body site-content" id="path-body"
+            style="border-left: solid 2px #1AA094;">
+            {{!-- body 内容  $ref = temp_body --}}
+        </div>
+        
+        {{if info.license}}
+        <div class="layui-footer footer">
+            <div class="layui-main">
+                <a href="{{:info.license.url}}" target="blank">{{:info.license.name}}</a></p>
+            </div>
+        </div>
+        {{/if}}
+    </div>
+</script>
+	<script id="temp_body" type="text/template">
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+            <li class="layui-this"><span class="method {{:method}}" m_operationId ="{{:operationId}}" path="{{:path}}" method = "{{:method}}">{{:method}}</span>{{:path}}</li>
+            <li>在线测试</li>
+        </ul>
+        <div class="layui-tab-content" style="min-height: 150px; padding: 5px 0px 0px; height: 803px;">
+            <div class="layui-tab-item layui-show">
+              <table class="layui-table">
+              <colgroup>
+                <col width="150">
+                <col width="150">
+                <col width="150">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>Path</th>
+                  <td colspan="3">{{:path}}</td>
+                </tr>
+                <tr>
+                  <th>Summary</th>
+                  <td colspan="3">{{:summary}}</td>
+                </tr>
+                <tr>
+                  <th>Description</th>
+                  <td colspan="3">{{:description}}</td>
+                </tr>
+                <tr>
+                  <th>Consumes</th>
+                  <td>{{:consumes}}</td>
+                  <th>Produces</th>
+                  <td>{{:produces}}</td>
+                </tr>
+              </tbody>
+            </table>
+            <fieldset class="layui-elem-field layui-field-title" >
+                <legend>请求参数</legend>
+            </fieldset>
+            <table class="layui-table">
+              <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>type</th>
+                    <th>Required</th>
+                </tr> 
+              </thead>
+              <tbody>
+                {{for parameters}}
+                    <tr>
+                        <td>{{:name}}</td>
+                        <td>{{:description}}</td>
+                        <td>{{:type}}</td>
+                        {{if required}}
+                            <td><i class="layui-icon">&#xe618;</i></td>
+                        {{else}}
+                            <td></td>
+                        {{/if}}                   
+                    </tr>
+                {{/for}}
+              </tbody>
+            </table>
+            <fieldset class="layui-elem-field layui-field-title" >
+                <legend>返回参数</legend>
+            </fieldset>
+                <table class="layui-table">
+                    <thead>
+                    <tr>
+                        <th>Properties</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                    </thead>
+                    <tbody id="path-body-response-model">
+                    </tbody>
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+                </table>
+                <fieldset class="layui-elem-field layui-field-title" >
+                    <legend>【data】数据体</legend>
+                </fieldset>
+                <table class="layui-table" style="margin-left: 30px;width: 50%">
+                    <thead>
+                    <tr>
+                        <th>Properties</th>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                    </thead>
+                    <tbody id="path-child-body-response-model">
+                    </tbody>
 
-		<!--[if !IE]> -->
-		<!-- <link rel="stylesheet" href="${ctx}/static/assets/css/pace.css" />
-		<script data-pace-options='{ "ajax": true, "document": true, "eventLag": false, "elements": false }' src="${ctx}/static/assets/components/PACE/pace.js"></script> -->
-
-		<!-- <![endif]-->
-
-		<!-- bootstrap & fontawesome -->
-		<link rel="stylesheet" href="${ctx}/static/assets/css/bootstrap.css" />
-		<link rel="stylesheet" href="${ctx}/static/js/zTree/css/zTreeStyle/zTreeStyle.css" />
-		<link rel="stylesheet" href="${ctx}/static/assets/components/font-awesome/css/font-awesome.css" />
-
-		<!-- text fonts -->
-		<link rel="stylesheet" href="${ctx}/static/assets/css/ace-fonts.css" />
-
-		<!-- ace styles -->
-		<link rel="stylesheet" href="${ctx}/static/assets/css/ace.css" class="ace-main-stylesheet" id="main-ace-style" />
-
-		<!--[if lte IE 9]>
-			<link rel="stylesheet" href="${ctx}/static/assets/css/ace-part2.css" class="ace-main-stylesheet" />
-		<![endif]-->
-		<link rel="stylesheet" href="${ctx}/static/assets/css/ace-skins.css" />
-		<link rel="stylesheet" href="${ctx}/static/assets/css/ace-rtl.css" />
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="${ctx }/static/assets/components/bootstrap-table/bootstrap-table.css">
-		<link rel="stylesheet" href="${ctx }/static/assets/css/weui.min.css">
-		<!--[if lte IE 9]>
-		  <link rel="stylesheet" href="${ctx}/static/assets/css/ace-ie.css" />
-		<![endif]-->
-		<link rel="stylesheet" href="${ctx}/static/js/tagsinput/bootstrap-tagsinput.css" />
-		<link rel="stylesheet" href="${ctx}/static/js/datetimepicker/bootstrap-datepicker3.css" />
-		<link rel="stylesheet" href="${ctx}/static/js/daterangepicker/daterangepicker.min.css" />
-		<link href="${ctx}/static/js/fileinput/fileinput.min.css" media="all" rel="stylesheet" type="text/css" />
-		<link href="${ctx}/static/js/multiselect/bootstrap-multiselect.css" media="all" rel="stylesheet" type="text/css" />
-		<link href='${ctx}/static/js/fullcalendar/fullcalendar.css' rel='stylesheet' />
-		<link href='${ctx}/static/js/fullcalendar/fullcalendar.print.css' rel='stylesheet' media='print' />
-		
-		<!-- ace settings handler -->
-		<script src="${ctx}/static/assets/js/ace-extra.js"></script>
-
-		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
-
-		<!--[if lte IE 8]>
-		<script src="${ctx}/static/assets/components/html5shiv/dist/html5shiv.min.js"></script>
-		<script src="${ctx}/static/assets/components/respond/dest/respond.min.js"></script>
-		<![endif]-->
-		
-				<!-- basic scripts -->
-
-		<!--[if !IE]> -->
-		<script src="${ctx}/static/assets/components/jquery/dist/jquery.min.js"></script>
-		<!-- <![endif]-->
-
-		<!--[if IE]>
-<script src="${ctx}/static/assets/components/jquery.1x/dist/jquery.js"></script>
-<![endif]-->
-		<script type="text/javascript">
-			if('ontouchstart' in document.documentElement) document.write("<script src='${ctx}/static/assets/components/_mod/jquery.mobile.custom/jquery.mobile.custom.js'>"+"<"+"/script>");
-		</script>
-		<script src="${ctx}/static/assets/components/bootstrap/dist/js/bootstrap.js"></script>
-
-		<!-- ace scripts -->
-		<script src="${ctx}/static/assets/js/src/elements.scroller.js"></script>
-		<script src="${ctx}/static/assets/js/src/elements.colorpicker.js"></script>
-		<script src="${ctx}/static/assets/js/src/elements.fileinput.js"></script>
-		<script src="${ctx}/static/assets/js/src/elements.typeahead.js"></script>
-		<script src="${ctx}/static/assets/js/src/elements.wysiwyg.js"></script>
-		<script src="${ctx}/static/assets/js/src/elements.spinner.js"></script>
-		<script src="${ctx}/static/assets/js/src/elements.treeview.js"></script>
-		<script src="${ctx}/static/assets/js/src/elements.wizard.js"></script>
-		<script src="${ctx}/static/assets/js/src/elements.aside.js"></script>
-		<script src="${ctx}/static/assets/js/src/ace.js"></script>
-		<script src="${ctx}/static/assets/js/src/ace.basics.js"></script>
-		<script src="${ctx}/static/assets/js/src/ace.scrolltop.js"></script>
-		<script src="${ctx}/static/assets/js/src/ace.ajax-content.js"></script>
-		<script src="${ctx}/static/assets/js/src/ace.touch-drag.js"></script>
-		<script src="${ctx}/static/assets/js/src/ace.sidebar.js"></script>
-		<script src="${ctx}/static/assets/js/src/ace.sidebar-scroll-1.js"></script>
-		<script src="${ctx}/static/assets/js/src/ace.submenu-hover.js"></script>
-		<script src="${ctx}/static/assets/js/src/ace.widget-box.js"></script>
-		<script src="${ctx}/static/assets/js/src/ace.settings.js"></script>
-		<script src="${ctx}/static/assets/js/src/ace.settings-rtl.js"></script>
-		<script src="${ctx}/static/assets/js/src/ace.settings-skin.js"></script>
-		<script src="${ctx}/static/assets/js/src/ace.widget-on-reload.js"></script>
-		<script src="${ctx}/static/assets/js/src/ace.searchbox-autocomplete.js"></script>
-		<script src="${ctx }/static/assets/components/bootbox.js/bootbox.min.js" ></script>
-		<script src="${ctx }/static/assets/components/bootstrap-table/bootstrap-table.js" ></script>
-		<script src="${ctx }/static/assets/components/bootstrap-table/locale/bootstrap-table-zh-CN.js"></script>
-		<script src="${ctx}/static/js/nice-validator/jquery.validator.min.js?local=zh-CN"></script>
-		<script type="text/javascript" src="${ctx}/static/js/zTree/js/jquery.ztree.core.js"></script>
-		<script type="text/javascript" src="${ctx}/static/js/zTree/js/jquery.ztree.excheck.js"></script>
-		<script type="text/javascript" src="${ctx}/static/js/zTree/js/jquery.ztree.exhide.js"></script>
-		<script src="${ctx}/static/js/dateUtil.js"></script>
-		<script src="${ctx}/static/js/common.js"></script>
-		<script src="${ctx}/static/js/treeUtil.js"></script>
-		<script type="text/javascript" src="${ctx}/static/js/tagsinput/bootstrap-tagsinput.min.js"></script>
-		<script type="text/javascript" src="${ctx}/static/js/datetimepicker/bootstrap-datepicker.js"></script>
-		<script type="text/javascript" src="${ctx}/static/js/moment/moment.min.js"></script>
-		<script type="text/javascript" src="${ctx}/static/js/daterangepicker/daterangepicker.min.js"></script>
-		<%--<script type="text/javascript" src="${ctx}/static/js/datetimepicker/locales/bootstrap-datetimepicker.zh-CN.js"></script>--%>
-		<script type="text/javascript" src="${ctx}/static/js/multiselect/bootstrap-multiselect.js"></script>
-		<script src="${ctx}/static/js/fileinput/fileinput.js" type="text/javascript"></script>
-		<script src="${ctx}/static/js/fileinput/locales/zh.js" type="text/javascript"></script>
-		<script src="${ctx}/static/js/ajaxfileupload.js"></script>
-		<script src="${ctx}/static/js/vuejs/vue.min.js"></script>
-		<!-- 百度ueditor -->
-		<script type="text/javascript" charset="utf-8" src="${ctx}/static/js/ueditor/ueditor.config.js"></script>
-	    <script type="text/javascript" charset="utf-8" src="${ctx}/static/js/ueditor/ueditor.all.min.js"> </script>
-	    <script type="text/javascript" charset="utf-8" src="${ctx}/static/js/ueditor/lang/zh-cn/zh-cn.js"></script>
-	    <!-- fullcalendar -->
-	    <script src='${ctx}/static/js/fullcalendar/lib/moment.min.js'></script>
-		<script src='${ctx}/static/js/fullcalendar/fullcalendar.js'></script>
-		<script src='${ctx}/static/js/fullcalendar/lang/zh-cn.js'></script>
-		<!-- mui -->
-<%-- 		<script src="${ctx }/static/js/mui/js/mui.min.js"></script>
-		 <script src="${ctx }/static/js/mui/js/mui.zoom.js"></script>
-		<script src="${ctx }/static/js/mui/js/mui.previewimage.js"></script>  --%>
-	</head>
-
-	<body class="no-skin">
-		<!-- #section:basics/navbar.layout -->
-		<jsp:include page="header.jsp"></jsp:include>
-
-		<!-- /section:basics/navbar.layout -->
-		<div class="main-container" id="main-container">
-			<script type="text/javascript">
-				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
-			</script>
-			<jsp:include page="sider.jsp"></jsp:include>
-			<!-- #section:basics/sidebar -->
-			<!-- /section:basics/sidebar -->
-			<div class="main-content">
-				<div class="main-content-inner">
-					<div class="breadcrumbs" id="breadcrumbs">
-						<script type="text/javascript">
-							try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
-						</script>
-						<ul class="breadcrumb" id="breadcrumb">
-							<li>
-								<i class="ace-icon fa fa-home home-icon"></i>
-								<a href="#home">主页</a>
-							</li>
-						</ul><!-- /.breadcrumb -->
-					</div>
-					<!-- #section:basics/content.breadcrumbs -->
-					<div class="page-content">
-						<div class="page-content-area" data-ajax-content="true">
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<jsp:include page="footer.jsp"></jsp:include>
-
-			<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
-				<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
-			</a>
-		</div><!-- /.main-container -->
-		
-		
-<div id="loadingToast" class="weui_loading_toast" style="display: none;">
-		<div class="weui_mask_transparent"></div>
-		<div class="weui_toast">
-			<div class="weui_loading">
-				<div class="weui_loading_leaf weui_loading_leaf_0"></div>
-				<div class="weui_loading_leaf weui_loading_leaf_1"></div>
-				<div class="weui_loading_leaf weui_loading_leaf_2"></div>
-				<div class="weui_loading_leaf weui_loading_leaf_3"></div>
-				<div class="weui_loading_leaf weui_loading_leaf_4"></div>
-				<div class="weui_loading_leaf weui_loading_leaf_5"></div>
-				<div class="weui_loading_leaf weui_loading_leaf_6"></div>
-				<div class="weui_loading_leaf weui_loading_leaf_7"></div>
-				<div class="weui_loading_leaf weui_loading_leaf_8"></div>
-				<div class="weui_loading_leaf weui_loading_leaf_9"></div>
-				<div class="weui_loading_leaf weui_loading_leaf_10"></div>
-				<div class="weui_loading_leaf weui_loading_leaf_11"></div>
-			</div>
-			<p class="weui_toast_content">加载中......</p>
-		</div>
-	</div>
-		
-
-		<script type="text/javascript">
-			bootbox.setLocale("zh_CN");  
-			$(".page-content-area").ace_ajax({
-				  content_url: function(hash) {
-					  var tmp = hash.split(";");
-					  if(tmp[0].substring(0,1) =="/"){
-						  return  tmp[0].substring(1);
-					  }else{
-						  return  tmp[0];
-					  }
-				  },
-				  //loading_overlay:"body",//默认null，表示加载到maincontent上
-				  default_url: "#home"
-			})
-			
-/* 			$('.dropdown-toggle').on("click",function(){
-				$(this).dropdown();
-			}) */
-			
-			//解决图片缩放，导致mui阻挡href事件的bug
-/* 			mui('body').on('tap','a',function(){
-				    window.top.location.href=this.href;
-			}); */
-		</script>
-	</body>
+                </table>
+            </div>
+            <div class="layui-tab-item">
+                <fieldset class="layui-elem-field layui-field-title" >
+                    <legend>Parameters</legend>
+                </fieldset>
+                <div class="method-type">
+                    <lable>Parameter Type : </lable>
+                    <input type="hidden" id="content_type_{{:operationId}}" value="form">
+                    <button id="pt_form_{{:operationId}}" type="form" operationId = "{{:operationId}}" onclick="changeParameterType(this)" class="layui-btn layui-btn-small layui-btn-normal layui-btn-radius">Form</button>
+                    <button id="pt_json_{{:operationId}}" type="json" operationId = "{{:operationId}}" onclick="changeParameterType(this)" class="layui-btn layui-btn-small layui-btn-primary layui-btn-radius">Json</button>
+                </div>
+                <textarea class="parameter-text hide" rows="10" id="text_tp_{{:operationId}}"></textarea>
+                <table class="layui-table"  id="table_tp_{{:operationId}}">
+                  <colgroup>
+                    <col width="150">
+                    <col>
+                    <col>
+                    <col width="150">
+                    <col width="150">
+                   <col>
+                  </colgroup>
+                  <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Value</th>
+                        <th>Description</th>
+                        <th>Parameter Type</th>
+                        <th>Data Type</th>
+                        <th>Required</th>
+                    </tr> 
+                  </thead>
+                  <tbody>
+                    {{for parameters}}
+                        <tr>
+                            <td>{{:name}}</td>
+                            <td>
+                            {{if required}}
+                                <input type="text" p_operationId="{{:~root.operationId}}" name="{{:name}}" in="{{:in}}" required="required" value="{{:default}}" placeholder="required" autocomplete="off" class="layui-input">
+                            {{else}}
+                                <input type="text" p_operationId="{{:~root.operationId}}" name="{{:name}}" in="{{:in}}" value="{{:default}}" autocomplete="off" class="layui-input">
+                            {{/if}}  
+                            </td>
+                            <td>{{:description}}</td>
+                            <td>{{:in}}</td>
+                            <td>{{:type}}</td>     
+                            {{if required}}
+                                <td><i class="layui-icon">&#xe618;</i></td>
+                            {{else}}
+                                <td></td>
+                            {{/if}}                   
+                        </tr>
+                    {{/for}}
+                  </tbody>
+                </table>
+                <div>
+                    <button class="layui-btn" name="btn_submit" onclick="getData('{{:operationId}}')"> Submit </button>
+                </div>
+                <fieldset class="layui-elem-field layui-field-title" >
+                    <legend>Responses</legend>
+                </fieldset>
+                <div class="responseJson"><pre id="json-response"></pre>
+            </div>
+        </div>
+        </div>
+    </div>
+</script>
+	<script id="temp_body_response_model" type="text/template">
+   {{props properties}}
+    <tr>
+        <td>{{:key}}</td>
+        <td>{{:prop.type}}</td>
+        <td>{{:prop.description}}</td>
+    </tr>
+   {{/props}} 
+</script>
+</body>
+<script src="webjars/layui/layui.js"></script>
+<script src="webjars/js/jquery.js"></script>
+<script src="webjars/js/jsrender.min.js"></script>
+<script src="webjars/js/jquery.json-viewer.js"></script>
+<script src="webjars/js/docs.js"></script>
 </html>
