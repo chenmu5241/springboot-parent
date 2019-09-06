@@ -29,7 +29,7 @@ public class DataSourceConfigMysql{
 	public SqlSessionFactory sessionFactory1(@Qualifier("dataSourceMysql") DataSource dataSource) throws Exception {
 		SqlSessionFactoryBean bean = new SqlSessionFactoryBean();
 		bean.setDataSource(dataSource);
-		bean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:mapper/mysql/*.xml"));
+		bean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources("classpath:mapper/read/*.xml"));
 		return bean.getObject();
 	}
 

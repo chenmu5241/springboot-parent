@@ -6,11 +6,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.constraints.NotNull;
 
-import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authc.IncorrectCredentialsException;
-import org.apache.shiro.authc.UnknownAccountException;
-import org.apache.shiro.authc.UsernamePasswordToken;
-import org.apache.shiro.subject.Subject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.validation.annotation.Validated;
@@ -43,37 +38,9 @@ public class ApiLoginController {
 			@NotNull(message="密码不能为空") String password) {
 		DataResult<String> result = new DataResult<String>();
 		try {
-			Subject subject = SecurityUtils.getSubject();
-			
-			password = Base64.getEncoder().encodeToString(password.getBytes());//密码编码
-			UsernamePasswordToken token = new UsernamePasswordToken(username, password);
-			token.setRememberMe(true);
-			subject.login(token);// 如果登录成功才会继续执行下面的操作
-			// 设置token
-			String tokenStr = "";// 设置token
-
-			//获取用户权限
-			SysAccount sysAccount = (SysAccount) SecurityUtils.getSubject().getPrincipal();
-			result.setData(tokenStr);
 			result.setSuccess(true);
 			result.setMessage("登录成功!");
 		} catch (Exception e) {
-			if (UnknownAccountException.class.getName().equals(e.getClass().getName())) {
-				// 最终会抛给异常处理器
-				result.setMessage("账号不存在");
-			} else if (IncorrectCredentialsException.class.getName().equals(e.getClass().getName())) {
-				result.setMessage("用户名/密码错误");
-			} else if ("randomCodeError".equals(e.getClass().getName())) {
-				result.setMessage("验证码错误");
-			} else if ("longTimeSession".equals(e.getClass().getName())) {
-				result.setMessage("session无效刷新重试");
-			} else if (NullPointerException.class.getName().equals(e.getClass().getName())) {
-				result.setMessage("用户名密码不能为空");
-			} else {
-				result.setMessage("其他错误");
-			}
-			result.setSuccess(false);
-			// logger.error("登录异常:", e);
 		}
 		return result;
 	}

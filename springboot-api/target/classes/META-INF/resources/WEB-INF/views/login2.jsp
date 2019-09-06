@@ -69,7 +69,7 @@ body {
 											<div class="space-6"></div>
 											<span id="liDivErrorMessage0" style="color: #f00; margin-bottom: 4px;">${loginErrorMsg}</span>
 											<div class="space-6"></div>
-											<form class="form-inline" method="post" action="${ctx}/loginSubmit"  data-validator-option="{timely:2, theme:'yellow_top'}">
+											<form class="form-inline" method="post" action="${ctx}/login" onsubmit="return  sub()" data-validator-option="{timely:2, theme:'yellow_top'}">
 												<input type="hidden" name="uuid" value="${uuid }">
 												<fieldset>
 													<label class="block clearfix"> <span class="block input-icon input-icon-right"> <input type="text" class="form-control" placeholder="用户名" name="username" id="username"

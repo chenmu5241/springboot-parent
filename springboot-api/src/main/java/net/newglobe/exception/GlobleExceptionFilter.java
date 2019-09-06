@@ -27,7 +27,7 @@ public class GlobleExceptionFilter {
 	public ErrorResult myException(Exception ex) {
 		// 记录错误
 		logger.error("参数绑定异常:", ex);
-		ex.printStackTrace();
+//		ex.printStackTrace();
 
 		ErrorResult result = new ErrorResult();
 		result.setSuccess(false);
@@ -47,7 +47,7 @@ public class GlobleExceptionFilter {
 	public ErrorResult BindException(BindException ex) {
 		// 记录错误
 		logger.error("参数绑定异常:", ex);
-		ex.printStackTrace();
+//		ex.printStackTrace();
 
 		List<FieldError> fieldErrors = ex.getFieldErrors();
 		List<String> list = new LinkedList<String>();
@@ -70,7 +70,7 @@ public class GlobleExceptionFilter {
 	@ResponseBody
 	@ExceptionHandler(value = SQLException.class)
 	public ErrorResult sqlException(Exception ex) {
-		ex.printStackTrace();
+//		ex.printStackTrace();
 		ErrorResult result = new ErrorResult();
 		result.setSuccess(false);
 		result.setMessage("sql执行异常");
@@ -88,7 +88,7 @@ public class GlobleExceptionFilter {
 	@ExceptionHandler(value = ValidationException.class)
 	public ErrorResult validationException(Exception ex) {
 		// 记录错误
-		ex.printStackTrace();
+//		ex.printStackTrace();
 		logger.error("参数格式不符合要求:", ex);
 
 		ValidationException ex2 = (ValidationException) ex;
