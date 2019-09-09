@@ -25,7 +25,7 @@ public class ValidateCodeFilter extends OncePerRequestFilter {
 			throws ServletException, IOException {
 		System.out.println(request.getRequestURI());
 		// 是一个登陆请求
-		if (StringUtils.equals("/springboot-api/loginSubmit", request.getRequestURI())) {
+		if (StringUtils.equals("/loginSubmit", request.getRequestURI())) {
 			try {
 				validate(new ServletWebRequest(request));
 			} catch (ValidateCodeException e) {

@@ -30,13 +30,13 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		http.addFilterBefore(validateCodeFilter, UsernamePasswordAuthenticationFilter.class)
 		.formLogin()
 				.loginPage("/login")// 登录页
-				.loginProcessingUrl("/loginSubmit")//提交请求
-				.failureUrl("/login?error=true")
-				.successForwardUrl("/index")
-				.defaultSuccessUrl("/index")//不配置会默认跳转到请求之前的页面
+				.loginProcessingUrl("/loginSubmit")//提交请求,这个只是一个标记，实际controller不必存在
+//				.failureForwardUrl("/login")
+//				.failureUrl("/login")
+//				.successForwardUrl("/index")
+//				.defaultSuccessUrl("/index")//不配置会默认跳转到请求之前的页面
 				.successHandler(myAuthenticationSuccessHandler)//自定义成功处理
 				.failureHandler(myAuthenticationFailureHandler)//自定义失败处理
-				
 				.and().authorizeRequests()// 授权
 				.antMatchers("/login","/static/**","/css/**","/getCode")
 				.permitAll()

@@ -31,10 +31,10 @@ public class LoginController {
 		return "login";
 	}
 	
-	@RequestMapping(value = "/loginSubmit")
+	/*@RequestMapping(value = "/loginSubmit")
 	public String loginSubmit(HttpServletResponse response, HttpServletRequest request) {
 		return "loginSubmit";
-	}
+	}*/
 	
 	
 	/**

@@ -67,7 +67,7 @@ body {
 												<i class="ace-icon fa fa-coffee green"></i> 请输入
 											</h4>
 											<div class="space-6"></div>
-											<span id="liDivErrorMessage0" style="color: #f00; margin-bottom: 4px;">${loginErrorMsg}</span>
+											<span id="liDivErrorMessage0" style="color: #f00; margin-bottom: 4px;">${param.error}${loginErrorMsg}</span>
 											<div class="space-6"></div>
 											<form class="form-inline" method="post" action="${ctx}/loginSubmit"  data-validator-option="{timely:2, theme:'yellow_top'}">
 												<input type="hidden" name="uuid" value="${uuid }">

@@ -29,6 +29,8 @@ public class MyAuthenticationSuccessHandler extends SavedRequestAwareAuthenticat
 			response.setContentType("application/json;charset=UTF-8");
 			response.getWriter().write(JSON.toJSONString(result));
 		} else {// 页面提交方式
+			//成功之后跳转到首页
+//			response.sendRedirect("/springboot-api/index");
 			super.onAuthenticationSuccess(request, response, authentication);
 		}
 	}

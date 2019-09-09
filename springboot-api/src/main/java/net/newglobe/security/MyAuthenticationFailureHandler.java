@@ -19,6 +19,11 @@ import net.newglobe.util.RequestUtil;
 @Component
 public class MyAuthenticationFailureHandler extends SimpleUrlAuthenticationFailureHandler {
 
+	public MyAuthenticationFailureHandler() {
+		this.setUseForward(true);// 使用forward方式跳转
+		this.setDefaultFailureUrl("/login");// 设置默认登录认证失败的url
+	}
+
 	@Override
 	public void onAuthenticationFailure(HttpServletRequest request, HttpServletResponse response,
 			AuthenticationException exception) throws IOException, ServletException {
@@ -31,9 +36,9 @@ public class MyAuthenticationFailureHandler extends SimpleUrlAuthenticationFailu
 			response.setContentType("application/json;charset=UTF-8");
 			response.getWriter().write(JSON.toJSONString(result));
 		} else {// 页面提交方式
-			request.getSession().setAttribute("username", request.getParameter("username"));
-			request.getSession().setAttribute("password", request.getParameter("password"));
-			request.getSession().setAttribute("loginErrorMsg", exception.getMessage());
+			request.setAttribute("username", request.getParameter("username"));
+			request.setAttribute("password", request.getParameter("password"));
+			request.setAttribute("loginErrorMsg", exception.getMessage());
 			super.onAuthenticationFailure(request, response, exception);
 		}
 	}
