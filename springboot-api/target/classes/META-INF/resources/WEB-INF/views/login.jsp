@@ -80,7 +80,7 @@ body {
 													</span>
 													</label> <label class="block clearfix pos-rel"> <input type="text" value="" class="form-control" style="width: 60% !important;" placeholder="验证码" id="randomcode" name="randomcode" />
 														<img id="randomcode_img" src="${ctx}/getCode" class="pos-abs" style="top: 0; right: 0;" alt="" width="38%" height="34px" onclick="javascript:updateCode();" />
-													</label> <label class="block clearfix"> <input type="checkbox" name="rememberMe" checked="checked">记住我
+													</label> <label class="block clearfix"> <input type="checkbox" name="remember-me" checked="checked">记住我
 													</label>
 													<div class="clearfix">
 														<button type="submit" class="width-100  btn btn-primary">

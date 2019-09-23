@@ -1,0 +1,1317 @@
+17:39:33.417 [main] INFO  ApiApplication - Starting ApiApplication on DESKTOP-82PPJKR with PID 7080 (E:\project\eclipse\springboot-parent\springboot-api\target\classes started by Administrator in E:\project\eclipse\springboot-parent\springboot-api)
+17:39:33.484 [main] INFO  ApiApplication - The following profiles are active: dev
+17:39:33.914 [main] INFO  AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@e48bf9a: startup date [Tue Sep 10 17:39:33 CST 2019]; root of context hierarchy
+17:39:44.852 [main] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[net.newglobe]' package. Please check your configuration.
+17:39:45.772 [main] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+17:39:46.691 [main] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+17:39:53.273 [main] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$60306ec4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:39:54.380 [main] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$99c4b096] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:40:00.861 [main] INFO  TomcatWebServer - Tomcat initialized with port(s): 8089 (http)
+17:40:01.078 [main] INFO  Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+17:40:01.261 [main] INFO  StandardService - Starting service [Tomcat]
+17:40:01.270 [main] INFO  StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.37
+17:40:01.372 [localhost-startStop-1] INFO  AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_66\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.8.0_66\jre\bin;C:/Program Files/Java/jre1.8.0_66/bin/server;C:/Program Files/Java/jre1.8.0_66/bin;C:/Program Files/Java/jre1.8.0_66/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Docker\Docker\Resources\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_66\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\TortoiseSVN\bin;E:\software\apache-maven-3.5.0\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm;C:\Users\Administrator\AppData\Local\BypassRuntm;E:\software\eclipse;;.]
+17:40:04.614 [localhost-startStop-1] INFO  TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+17:40:04.686 [localhost-startStop-1] INFO  [/] - Initializing Spring embedded WebApplicationContext
+17:40:04.687 [localhost-startStop-1] INFO  ContextLoader - Root WebApplicationContext: initialization completed in 30773 ms
+17:40:06.313 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+17:40:06.314 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+17:40:06.321 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+17:40:06.327 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+17:40:06.330 [localhost-startStop-1] INFO  DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+17:40:06.330 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'corsFilter' to: [/*]
+17:40:06.331 [localhost-startStop-1] INFO  ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+17:40:17.767 [main] INFO  SysConfig - 通过init方法初始化各种配置参数
+17:40:18.040 [main] INFO  HikariDataSource - HikariPool-1 - Starting...
+17:40:19.644 [main] INFO  HikariDataSource - HikariPool-1 - Start completed.
+17:40:24.010 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/api/isLogin],methods=[POST]}" onto public net.newglobe.app.model.vo.Result net.newglobe.app.controller.api.ApiLoginController.isLogin(java.lang.String)
+17:40:24.018 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/api/login],methods=[POST]}" onto public net.newglobe.app.model.vo.DataResult<java.lang.String> net.newglobe.app.controller.api.ApiLoginController.apiLogin(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String)
+17:40:24.020 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/error/{errorCode}]}" onto public net.newglobe.app.model.vo.Result net.newglobe.app.controller.ErrorController.index(javax.servlet.http.HttpServletRequest,java.lang.String)
+17:40:24.023 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/error/{errorCode}],produces=[html/text]}" onto public java.lang.String net.newglobe.app.controller.ErrorController.htmlError(javax.servlet.http.HttpServletRequest,java.lang.String)
+17:40:24.033 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/index || ]}" onto public java.lang.String net.newglobe.app.controller.IndexController.index(javax.servlet.http.HttpServletRequest)
+17:40:24.044 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/login]}" onto public java.lang.String net.newglobe.app.controller.LoginController.login(javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpServletRequest)
+17:40:24.047 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/getCode]}" onto public void net.newglobe.app.controller.LoginController.defaultKaptcha(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+17:40:24.165 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+17:40:24.166 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+17:40:24.169 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+17:40:24.216 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+17:40:24.217 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+17:40:28.804 [main] INFO  PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+17:40:32.256 [main] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'persistentTokenRepository' defined in class path resource [net/newglobe/config/WebSecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.web.authentication.rememberme.PersistentTokenRepository]: Factory method 'persistentTokenRepository' threw exception; nested exception is java.lang.IllegalArgumentException: Property 'dataSource' is required
+17:40:32.692 [main] INFO  HikariDataSource - HikariPool-1 - Shutdown initiated...
+17:40:32.755 [main] INFO  HikariDataSource - HikariPool-1 - Shutdown completed.
+17:40:32.813 [main] INFO  StandardService - Stopping service [Tomcat]
+17:40:32.983 [main] INFO  ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+17:40:33.114 [main] ERROR SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'persistentTokenRepository' defined in class path resource [net/newglobe/config/WebSecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.web.authentication.rememberme.PersistentTokenRepository]: Factory method 'persistentTokenRepository' threw exception; nested exception is java.lang.IllegalArgumentException: Property 'dataSource' is required
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:591)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1246)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.__refresh(AbstractApplicationContext.java:548)
+	at org.springframework.context.support.AbstractApplicationContext.jrLockAndRefresh(AbstractApplicationContext.java:40002)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:41008)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:386)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1242)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1230)
+	at net.newglobe.ApiApplication.main(ApiApplication.java:12)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'persistentTokenRepository' defined in class path resource [net/newglobe/config/WebSecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.web.authentication.rememberme.PersistentTokenRepository]: Factory method 'persistentTokenRepository' threw exception; nested exception is java.lang.IllegalArgumentException: Property 'dataSource' is required
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:583)
+	... 22 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'persistentTokenRepository' defined in class path resource [net/newglobe/config/WebSecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.web.authentication.rememberme.PersistentTokenRepository]: Factory method 'persistentTokenRepository' threw exception; nested exception is java.lang.IllegalArgumentException: Property 'dataSource' is required
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:591)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1246)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.resolveBeanReference(ConfigurationClassEnhancer.java:396)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:368)
+	at net.newglobe.config.WebSecurityConfig$$EnhancerBySpringCGLIB$$2b696af5.persistentTokenRepository(<generated>)
+	at net.newglobe.config.WebSecurityConfig.configure(WebSecurityConfig.java:55)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.getHttp(WebSecurityConfigurerAdapter.java:231)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.init(WebSecurityConfigurerAdapter.java:322)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.init(WebSecurityConfigurerAdapter.java:92)
+	at net.newglobe.config.WebSecurityConfig$$EnhancerBySpringCGLIB$$2b696af5.init(<generated>)
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.init(AbstractConfiguredSecurityBuilder.java:371)
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.doBuild(AbstractConfiguredSecurityBuilder.java:325)
+	at org.springframework.security.config.annotation.AbstractSecurityBuilder.build(AbstractSecurityBuilder.java:41)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration.springSecurityFilterChain(WebSecurityConfiguration.java:104)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$$EnhancerBySpringCGLIB$$40f5dd89.CGLIB$springSecurityFilterChain$5(<generated>)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$$EnhancerBySpringCGLIB$$40f5dd89$$FastClassBySpringCGLIB$$84b82237.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:365)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$$EnhancerBySpringCGLIB$$40f5dd89.springSecurityFilterChain(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.__invoke(DelegatingMethodAccessorImpl.java:43)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:45009)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:45012)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 23 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.web.authentication.rememberme.PersistentTokenRepository]: Factory method 'persistentTokenRepository' threw exception; nested exception is java.lang.IllegalArgumentException: Property 'dataSource' is required
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:583)
+	... 55 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Property 'dataSource' is required
+	at org.springframework.jdbc.support.JdbcAccessor.afterPropertiesSet(JdbcAccessor.java:160)
+	at org.springframework.jdbc.core.JdbcTemplate.<init>(JdbcTemplate.java:166)
+	at org.springframework.jdbc.core.support.JdbcDaoSupport.createJdbcTemplate(JdbcDaoSupport.java:73)
+	at org.springframework.jdbc.core.support.JdbcDaoSupport.setDataSource(JdbcDaoSupport.java:58)
+	at net.newglobe.config.WebSecurityConfig.persistentTokenRepository(WebSecurityConfig.java:36)
+	at net.newglobe.config.WebSecurityConfig$$EnhancerBySpringCGLIB$$2b696af5.CGLIB$persistentTokenRepository$1(<generated>)
+	at net.newglobe.config.WebSecurityConfig$$EnhancerBySpringCGLIB$$2b696af5$$FastClassBySpringCGLIB$$ea4b8e2c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:365)
+	at net.newglobe.config.WebSecurityConfig$$EnhancerBySpringCGLIB$$2b696af5.persistentTokenRepository(<generated>)
+	at sun.reflect.GeneratedMethodAccessor559.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:45005)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 56 common frames omitted
+17:43:28.038 [main] INFO  ApiApplication - Starting ApiApplication on DESKTOP-82PPJKR with PID 1496 (E:\project\eclipse\springboot-parent\springboot-api\target\classes started by Administrator in E:\project\eclipse\springboot-parent\springboot-api)
+17:43:28.076 [main] INFO  ApiApplication - The following profiles are active: dev
+17:43:28.552 [main] INFO  AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@763cf5b9: startup date [Tue Sep 10 17:43:28 CST 2019]; root of context hierarchy
+17:43:36.912 [main] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[net.newglobe]' package. Please check your configuration.
+17:43:37.412 [main] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+17:43:38.020 [main] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+17:43:43.398 [main] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$27d78d25] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:43:43.915 [main] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$616bcef7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:43:48.633 [main] INFO  TomcatWebServer - Tomcat initialized with port(s): 8089 (http)
+17:43:48.754 [main] INFO  Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+17:43:48.880 [main] INFO  StandardService - Starting service [Tomcat]
+17:43:48.881 [main] INFO  StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.37
+17:43:48.942 [localhost-startStop-1] INFO  AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_66\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.8.0_66\jre\bin;C:/Program Files/Java/jre1.8.0_66/bin/server;C:/Program Files/Java/jre1.8.0_66/bin;C:/Program Files/Java/jre1.8.0_66/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Docker\Docker\Resources\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_66\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\TortoiseSVN\bin;E:\software\apache-maven-3.5.0\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm;C:\Users\Administrator\AppData\Local\BypassRuntm;E:\software\eclipse;;.]
+17:43:51.538 [localhost-startStop-1] INFO  TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+17:43:51.573 [localhost-startStop-1] INFO  [/] - Initializing Spring embedded WebApplicationContext
+17:43:51.575 [localhost-startStop-1] INFO  ContextLoader - Root WebApplicationContext: initialization completed in 23023 ms
+17:43:52.682 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+17:43:52.684 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+17:43:52.685 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+17:43:52.685 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+17:43:52.696 [localhost-startStop-1] INFO  DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+17:43:52.697 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'corsFilter' to: [/*]
+17:43:52.697 [localhost-startStop-1] INFO  ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+17:44:01.219 [main] INFO  SysConfig - 通过init方法初始化各种配置参数
+17:44:01.371 [main] INFO  HikariDataSource - HikariPool-1 - Starting...
+17:44:02.647 [main] INFO  HikariDataSource - HikariPool-1 - Start completed.
+17:44:05.609 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/api/login],methods=[POST]}" onto public net.newglobe.app.model.vo.DataResult<java.lang.String> net.newglobe.app.controller.api.ApiLoginController.apiLogin(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String)
+17:44:05.616 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/api/isLogin],methods=[POST]}" onto public net.newglobe.app.model.vo.Result net.newglobe.app.controller.api.ApiLoginController.isLogin(java.lang.String)
+17:44:05.622 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/error/{errorCode}]}" onto public net.newglobe.app.model.vo.Result net.newglobe.app.controller.ErrorController.index(javax.servlet.http.HttpServletRequest,java.lang.String)
+17:44:05.625 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/error/{errorCode}],produces=[html/text]}" onto public java.lang.String net.newglobe.app.controller.ErrorController.htmlError(javax.servlet.http.HttpServletRequest,java.lang.String)
+17:44:05.627 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/index || ]}" onto public java.lang.String net.newglobe.app.controller.IndexController.index(javax.servlet.http.HttpServletRequest)
+17:44:05.636 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/getCode]}" onto public void net.newglobe.app.controller.LoginController.defaultKaptcha(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+17:44:05.639 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/login]}" onto public java.lang.String net.newglobe.app.controller.LoginController.login(javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpServletRequest)
+17:44:05.692 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+17:44:05.693 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+17:44:05.699 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+17:44:05.739 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+17:44:05.747 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+17:44:09.129 [main] INFO  PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+17:44:10.708 [main] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'persistentTokenRepository' defined in class path resource [net/newglobe/config/WebSecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.web.authentication.rememberme.PersistentTokenRepository]: Factory method 'persistentTokenRepository' threw exception; nested exception is java.lang.IllegalArgumentException: Property 'dataSource' is required
+17:44:10.907 [main] INFO  HikariDataSource - HikariPool-1 - Shutdown initiated...
+17:44:10.936 [main] INFO  HikariDataSource - HikariPool-1 - Shutdown completed.
+17:44:10.955 [main] INFO  StandardService - Stopping service [Tomcat]
+17:44:11.063 [main] INFO  ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+17:44:11.123 [main] ERROR SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'persistentTokenRepository' defined in class path resource [net/newglobe/config/WebSecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.web.authentication.rememberme.PersistentTokenRepository]: Factory method 'persistentTokenRepository' threw exception; nested exception is java.lang.IllegalArgumentException: Property 'dataSource' is required
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:591)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1246)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:304)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.__refresh(AbstractApplicationContext.java:548)
+	at org.springframework.context.support.AbstractApplicationContext.jrLockAndRefresh(AbstractApplicationContext.java:40002)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:41008)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:386)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1242)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1230)
+	at net.newglobe.ApiApplication.main(ApiApplication.java:12)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'persistentTokenRepository' defined in class path resource [net/newglobe/config/WebSecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.web.authentication.rememberme.PersistentTokenRepository]: Factory method 'persistentTokenRepository' threw exception; nested exception is java.lang.IllegalArgumentException: Property 'dataSource' is required
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:583)
+	... 22 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'persistentTokenRepository' defined in class path resource [net/newglobe/config/WebSecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.web.authentication.rememberme.PersistentTokenRepository]: Factory method 'persistentTokenRepository' threw exception; nested exception is java.lang.IllegalArgumentException: Property 'dataSource' is required
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:591)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1246)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.resolveBeanReference(ConfigurationClassEnhancer.java:396)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:368)
+	at net.newglobe.config.WebSecurityConfig$$EnhancerBySpringCGLIB$$f3108956.persistentTokenRepository(<generated>)
+	at net.newglobe.config.WebSecurityConfig.configure(WebSecurityConfig.java:55)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.getHttp(WebSecurityConfigurerAdapter.java:231)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.init(WebSecurityConfigurerAdapter.java:322)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.init(WebSecurityConfigurerAdapter.java:92)
+	at net.newglobe.config.WebSecurityConfig$$EnhancerBySpringCGLIB$$f3108956.init(<generated>)
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.init(AbstractConfiguredSecurityBuilder.java:371)
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.doBuild(AbstractConfiguredSecurityBuilder.java:325)
+	at org.springframework.security.config.annotation.AbstractSecurityBuilder.build(AbstractSecurityBuilder.java:41)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration.springSecurityFilterChain(WebSecurityConfiguration.java:104)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$$EnhancerBySpringCGLIB$$89cfbea.CGLIB$springSecurityFilterChain$3(<generated>)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$$EnhancerBySpringCGLIB$$89cfbea$$FastClassBySpringCGLIB$$39bd294f.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:365)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration$$EnhancerBySpringCGLIB$$89cfbea.springSecurityFilterChain(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.__invoke(DelegatingMethodAccessorImpl.java:43)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:45009)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:45012)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 23 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.web.authentication.rememberme.PersistentTokenRepository]: Factory method 'persistentTokenRepository' threw exception; nested exception is java.lang.IllegalArgumentException: Property 'dataSource' is required
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:583)
+	... 55 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Property 'dataSource' is required
+	at org.springframework.jdbc.support.JdbcAccessor.afterPropertiesSet(JdbcAccessor.java:160)
+	at org.springframework.jdbc.core.JdbcTemplate.<init>(JdbcTemplate.java:166)
+	at org.springframework.jdbc.core.support.JdbcDaoSupport.createJdbcTemplate(JdbcDaoSupport.java:73)
+	at org.springframework.jdbc.core.support.JdbcDaoSupport.setDataSource(JdbcDaoSupport.java:58)
+	at net.newglobe.config.WebSecurityConfig.persistentTokenRepository(WebSecurityConfig.java:36)
+	at net.newglobe.config.WebSecurityConfig$$EnhancerBySpringCGLIB$$f3108956.CGLIB$persistentTokenRepository$1(<generated>)
+	at net.newglobe.config.WebSecurityConfig$$EnhancerBySpringCGLIB$$f3108956$$FastClassBySpringCGLIB$$44bd088d.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:365)
+	at net.newglobe.config.WebSecurityConfig$$EnhancerBySpringCGLIB$$f3108956.persistentTokenRepository(<generated>)
+	at sun.reflect.GeneratedMethodAccessor559.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:45005)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 56 common frames omitted
+17:47:21.631 [main] INFO  ApiApplication - Starting ApiApplication on DESKTOP-82PPJKR with PID 9084 (E:\project\eclipse\springboot-parent\springboot-api\target\classes started by Administrator in E:\project\eclipse\springboot-parent\springboot-api)
+17:47:21.652 [main] INFO  ApiApplication - The following profiles are active: dev
+17:47:22.083 [main] INFO  AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@387bf2d9: startup date [Tue Sep 10 17:47:22 CST 2019]; root of context hierarchy
+17:47:29.903 [main] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[net.newglobe]' package. Please check your configuration.
+17:47:30.486 [main] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+17:47:31.018 [main] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+17:47:35.922 [main] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$773c1848] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:47:36.428 [main] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b0d05a1a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:47:40.955 [main] INFO  TomcatWebServer - Tomcat initialized with port(s): 8089 (http)
+17:47:41.051 [main] INFO  Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+17:47:41.142 [main] INFO  StandardService - Starting service [Tomcat]
+17:47:41.148 [main] INFO  StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.37
+17:47:41.200 [localhost-startStop-1] INFO  AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_66\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.8.0_66\jre\bin;C:/Program Files/Java/jre1.8.0_66/bin/server;C:/Program Files/Java/jre1.8.0_66/bin;C:/Program Files/Java/jre1.8.0_66/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Docker\Docker\Resources\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_66\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\TortoiseSVN\bin;E:\software\apache-maven-3.5.0\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm;C:\Users\Administrator\AppData\Local\BypassRuntm;E:\software\eclipse;;.]
+17:47:43.788 [localhost-startStop-1] INFO  TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+17:47:43.822 [localhost-startStop-1] INFO  [/] - Initializing Spring embedded WebApplicationContext
+17:47:43.824 [localhost-startStop-1] INFO  ContextLoader - Root WebApplicationContext: initialization completed in 21741 ms
+17:47:44.857 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+17:47:44.868 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+17:47:44.869 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+17:47:44.869 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+17:47:44.871 [localhost-startStop-1] INFO  DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+17:47:44.871 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'corsFilter' to: [/*]
+17:47:44.871 [localhost-startStop-1] INFO  ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+17:47:52.910 [main] INFO  SysConfig - 通过init方法初始化各种配置参数
+17:47:53.060 [main] INFO  HikariDataSource - HikariPool-1 - Starting...
+17:47:54.160 [main] INFO  HikariDataSource - HikariPool-1 - Start completed.
+17:47:57.307 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/api/isLogin],methods=[POST]}" onto public net.newglobe.app.model.vo.Result net.newglobe.app.controller.api.ApiLoginController.isLogin(java.lang.String)
+17:47:57.325 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/api/login],methods=[POST]}" onto public net.newglobe.app.model.vo.DataResult<java.lang.String> net.newglobe.app.controller.api.ApiLoginController.apiLogin(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String)
+17:47:57.333 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/error/{errorCode}]}" onto public net.newglobe.app.model.vo.Result net.newglobe.app.controller.ErrorController.index(javax.servlet.http.HttpServletRequest,java.lang.String)
+17:47:57.341 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/error/{errorCode}],produces=[html/text]}" onto public java.lang.String net.newglobe.app.controller.ErrorController.htmlError(javax.servlet.http.HttpServletRequest,java.lang.String)
+17:47:57.344 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/index || ]}" onto public java.lang.String net.newglobe.app.controller.IndexController.index(javax.servlet.http.HttpServletRequest)
+17:47:57.345 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/getCode]}" onto public void net.newglobe.app.controller.LoginController.defaultKaptcha(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+17:47:57.357 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/login]}" onto public java.lang.String net.newglobe.app.controller.LoginController.login(javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpServletRequest)
+17:47:57.411 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+17:47:57.425 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+17:47:57.427 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+17:47:57.523 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+17:47:57.526 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+17:48:00.613 [main] INFO  PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+17:48:02.820 [main] INFO  DefaultSecurityFilterChain - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@298154d4, org.springframework.security.web.context.SecurityContextPersistenceFilter@43941806, org.springframework.security.web.header.HeaderWriterFilter@8a0447e, org.springframework.security.web.authentication.logout.LogoutFilter@d884e9a, net.newglobe.security.ValidateCodeFilter@474aeac5, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@23389e2b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6ef3f72c, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1c9fa12, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@1caff0db, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7cb9295f, org.springframework.security.web.session.SessionManagementFilter@602854ed, org.springframework.security.web.access.ExceptionTranslationFilter@2fad48b7, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@45b221c7]
+17:48:02.976 [main] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'persistentTokenRepository' defined in class path resource [net/newglobe/config/WebSecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.web.authentication.rememberme.PersistentTokenRepository]: Factory method 'persistentTokenRepository' threw exception; nested exception is java.lang.IllegalArgumentException: Property 'dataSource' is required
+17:48:03.104 [main] INFO  HikariDataSource - HikariPool-1 - Shutdown initiated...
+17:48:03.137 [main] INFO  HikariDataSource - HikariPool-1 - Shutdown completed.
+17:48:03.162 [main] INFO  StandardService - Stopping service [Tomcat]
+17:48:03.267 [main] INFO  ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+17:48:03.329 [main] ERROR SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'persistentTokenRepository' defined in class path resource [net/newglobe/config/WebSecurityConfig.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.web.authentication.rememberme.PersistentTokenRepository]: Factory method 'persistentTokenRepository' threw exception; nested exception is java.lang.IllegalArgumentException: Property 'dataSource' is required
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:591)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1246)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1096)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:535)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.__refresh(AbstractApplicationContext.java:548)
+	at org.springframework.context.support.AbstractApplicationContext.jrLockAndRefresh(AbstractApplicationContext.java:40002)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:41008)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:386)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1242)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1230)
+	at net.newglobe.ApiApplication.main(ApiApplication.java:12)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.web.authentication.rememberme.PersistentTokenRepository]: Factory method 'persistentTokenRepository' threw exception; nested exception is java.lang.IllegalArgumentException: Property 'dataSource' is required
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:583)
+	... 20 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Property 'dataSource' is required
+	at org.springframework.jdbc.support.JdbcAccessor.afterPropertiesSet(JdbcAccessor.java:160)
+	at org.springframework.jdbc.core.JdbcTemplate.<init>(JdbcTemplate.java:166)
+	at org.springframework.jdbc.core.support.JdbcDaoSupport.createJdbcTemplate(JdbcDaoSupport.java:73)
+	at org.springframework.jdbc.core.support.JdbcDaoSupport.setDataSource(JdbcDaoSupport.java:58)
+	at net.newglobe.config.WebSecurityConfig.persistentTokenRepository(WebSecurityConfig.java:36)
+	at net.newglobe.config.WebSecurityConfig$$EnhancerBySpringCGLIB$$42751479.CGLIB$persistentTokenRepository$1(<generated>)
+	at net.newglobe.config.WebSecurityConfig$$EnhancerBySpringCGLIB$$42751479$$FastClassBySpringCGLIB$$d05c51e0.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:365)
+	at net.newglobe.config.WebSecurityConfig$$EnhancerBySpringCGLIB$$42751479.persistentTokenRepository(<generated>)
+	at sun.reflect.GeneratedMethodAccessor558.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:45005)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 21 common frames omitted
+17:49:27.690 [main] INFO  ApiApplication - Starting ApiApplication on DESKTOP-82PPJKR with PID 3076 (E:\project\eclipse\springboot-parent\springboot-api\target\classes started by Administrator in E:\project\eclipse\springboot-parent\springboot-api)
+17:49:27.700 [main] INFO  ApiApplication - The following profiles are active: dev
+17:49:27.833 [main] INFO  AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4da9f723: startup date [Tue Sep 10 17:49:27 CST 2019]; root of context hierarchy
+17:49:30.188 [main] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[net.newglobe]' package. Please check your configuration.
+17:49:30.336 [main] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+17:49:30.485 [main] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+17:49:31.938 [main] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$aed19ce4] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:49:32.113 [main] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e865deb6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:49:33.721 [main] INFO  TomcatWebServer - Tomcat initialized with port(s): 8089 (http)
+17:49:33.756 [main] INFO  Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+17:49:33.806 [main] INFO  StandardService - Starting service [Tomcat]
+17:49:33.807 [main] INFO  StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.37
+17:49:33.821 [localhost-startStop-1] INFO  AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_66\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.8.0_66\jre\bin;C:/Program Files/Java/jre1.8.0_66/bin/server;C:/Program Files/Java/jre1.8.0_66/bin;C:/Program Files/Java/jre1.8.0_66/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Docker\Docker\Resources\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_66\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\TortoiseSVN\bin;E:\software\apache-maven-3.5.0\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm;C:\Users\Administrator\AppData\Local\BypassRuntm;E:\software\eclipse;;.]
+17:49:34.661 [localhost-startStop-1] INFO  TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+17:49:34.669 [localhost-startStop-1] INFO  [/] - Initializing Spring embedded WebApplicationContext
+17:49:34.670 [localhost-startStop-1] INFO  ContextLoader - Root WebApplicationContext: initialization completed in 6837 ms
+17:49:34.961 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+17:49:34.962 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+17:49:34.962 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+17:49:34.962 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+17:49:34.965 [localhost-startStop-1] INFO  DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+17:49:34.965 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'corsFilter' to: [/*]
+17:49:34.965 [localhost-startStop-1] INFO  ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+17:49:37.294 [main] INFO  SysConfig - 通过init方法初始化各种配置参数
+17:49:37.342 [main] INFO  HikariDataSource - HikariPool-1 - Starting...
+17:49:37.922 [main] INFO  HikariDataSource - HikariPool-1 - Start completed.
+17:49:38.966 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/api/login],methods=[POST]}" onto public net.newglobe.app.model.vo.DataResult<java.lang.String> net.newglobe.app.controller.api.ApiLoginController.apiLogin(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String)
+17:49:38.968 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/api/isLogin],methods=[POST]}" onto public net.newglobe.app.model.vo.Result net.newglobe.app.controller.api.ApiLoginController.isLogin(java.lang.String)
+17:49:38.969 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/error/{errorCode}]}" onto public net.newglobe.app.model.vo.Result net.newglobe.app.controller.ErrorController.index(javax.servlet.http.HttpServletRequest,java.lang.String)
+17:49:38.970 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/error/{errorCode}],produces=[html/text]}" onto public java.lang.String net.newglobe.app.controller.ErrorController.htmlError(javax.servlet.http.HttpServletRequest,java.lang.String)
+17:49:38.971 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/index || ]}" onto public java.lang.String net.newglobe.app.controller.IndexController.index(javax.servlet.http.HttpServletRequest)
+17:49:38.972 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/login]}" onto public java.lang.String net.newglobe.app.controller.LoginController.login(javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpServletRequest)
+17:49:38.973 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/getCode]}" onto public void net.newglobe.app.controller.LoginController.defaultKaptcha(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+17:49:38.991 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+17:49:38.993 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+17:49:38.994 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+17:49:39.004 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+17:49:39.004 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+17:49:40.006 [main] INFO  PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+17:49:40.676 [main] INFO  DefaultSecurityFilterChain - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2f0dae44, org.springframework.security.web.context.SecurityContextPersistenceFilter@5269aa68, org.springframework.security.web.header.HeaderWriterFilter@5a1e28ee, org.springframework.security.web.authentication.logout.LogoutFilter@4c33bf70, net.newglobe.security.ValidateCodeFilter@79ac50fe, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5698a866, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6a7c0932, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@746f5752, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@7e38f55, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@684c2c57, org.springframework.security.web.session.SessionManagementFilter@3294b641, org.springframework.security.web.access.ExceptionTranslationFilter@27f7db5a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@77cf9b08]
+17:49:41.323 [main] INFO  RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4da9f723: startup date [Tue Sep 10 17:49:27 CST 2019]; root of context hierarchy
+17:49:41.699 [main] INFO  SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:49:41.700 [main] INFO  SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:49:41.743 [main] INFO  ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in globleExceptionFilter
+17:49:41.833 [main] INFO  WelcomePageHandlerMapping - Adding welcome page template: index
+17:49:43.723 [main] INFO  StdSchedulerFactory - Using default implementation for ThreadExecutor
+17:49:43.764 [main] INFO  SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+17:49:43.765 [main] INFO  QuartzScheduler - Quartz Scheduler v.2.3.0 created.
+17:49:43.767 [main] INFO  RAMJobStore - RAMJobStore initialized.
+17:49:43.769 [main] INFO  QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+17:49:43.770 [main] INFO  StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+17:49:43.770 [main] INFO  StdSchedulerFactory - Quartz scheduler version: 2.3.0
+17:49:43.770 [main] INFO  QuartzScheduler - JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@4e8fab14
+17:49:44.012 [main] INFO  AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+17:49:44.016 [main] INFO  AnnotationMBeanExporter - Bean with name 'dataSourceMysql' has been autodetected for JMX exposure
+17:49:44.038 [main] INFO  AnnotationMBeanExporter - Bean with name 'rabbitConnectionFactory' has been autodetected for JMX exposure
+17:49:44.046 [main] INFO  AnnotationMBeanExporter - Located MBean 'dataSourceMysql': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSourceMysql,type=HikariDataSource]
+17:49:44.049 [main] INFO  AnnotationMBeanExporter - Located managed bean 'rabbitConnectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=rabbitConnectionFactory,type=CachingConnectionFactory]
+17:49:44.106 [main] INFO  DefaultLifecycleProcessor - Starting beans in phase 2147483647
+17:49:44.107 [main] INFO  DocumentationPluginsBootstrapper - Context refreshed
+17:49:44.159 [main] INFO  DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+17:49:44.285 [main] INFO  ApiListingReferenceScanner - Scanning for api listing references
+17:49:44.692 [main] INFO  SchedulerFactoryBean - Starting Quartz Scheduler now
+17:49:44.692 [main] INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+17:49:44.709 [main] INFO  ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+17:49:44.730 [main] INFO  Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"]
+17:49:44.755 [main] INFO  NioSelectorPool - Using a shared selector for servlet write/read
+17:49:44.832 [main] INFO  TomcatWebServer - Tomcat started on port(s): 8089 (http) with context path ''
+17:49:44.854 [main] INFO  ApiApplication - Started ApiApplication in 18.159 seconds (JVM running for 33.1)
+17:52:58.788 [http-nio-8089-exec-2] INFO  [/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+17:52:58.788 [http-nio-8089-exec-2] INFO  DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+17:52:58.839 [http-nio-8089-exec-2] INFO  DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 51 ms
+17:53:18.421 [RMI TCP Connection(2)-127.0.0.1] INFO  SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+17:53:18.421 [RMI TCP Connection(2)-127.0.0.1] INFO  AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@4da9f723: startup date [Tue Sep 10 17:49:27 CST 2019]; root of context hierarchy
+17:53:18.425 [RMI TCP Connection(2)-127.0.0.1] INFO  DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+17:53:18.426 [RMI TCP Connection(2)-127.0.0.1] INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+17:53:18.427 [RMI TCP Connection(2)-127.0.0.1] INFO  DefaultLifecycleProcessor - Stopping beans in phase 0
+17:53:18.436 [RMI TCP Connection(2)-127.0.0.1] INFO  SchedulerFactoryBean - Shutting down Quartz Scheduler
+17:53:18.436 [RMI TCP Connection(2)-127.0.0.1] INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+17:53:18.436 [RMI TCP Connection(2)-127.0.0.1] INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+17:53:18.438 [RMI TCP Connection(2)-127.0.0.1] INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+17:53:18.444 [RMI TCP Connection(2)-127.0.0.1] INFO  AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+17:53:18.445 [RMI TCP Connection(2)-127.0.0.1] INFO  AnnotationMBeanExporter - Unregistering JMX-exposed beans
+17:53:18.549 [RMI TCP Connection(2)-127.0.0.1] INFO  HikariDataSource - HikariPool-1 - Shutdown initiated...
+17:53:18.583 [RMI TCP Connection(2)-127.0.0.1] INFO  HikariDataSource - HikariPool-1 - Shutdown completed.
+17:53:40.608 [main] INFO  ApiApplication - Starting ApiApplication on DESKTOP-82PPJKR with PID 10652 (E:\project\eclipse\springboot-parent\springboot-api\target\classes started by Administrator in E:\project\eclipse\springboot-parent\springboot-api)
+17:53:40.616 [main] INFO  ApiApplication - The following profiles are active: dev
+17:53:40.759 [main] INFO  AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2776015d: startup date [Tue Sep 10 17:53:40 CST 2019]; root of context hierarchy
+17:53:43.341 [main] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[net.newglobe]' package. Please check your configuration.
+17:53:43.495 [main] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+17:53:43.657 [main] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+17:53:45.139 [main] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$bae7ef03] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:53:45.279 [main] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f47c30d5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:53:46.689 [main] INFO  TomcatWebServer - Tomcat initialized with port(s): 8089 (http)
+17:53:46.722 [main] INFO  Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+17:53:46.757 [main] INFO  StandardService - Starting service [Tomcat]
+17:53:46.757 [main] INFO  StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.37
+17:53:46.768 [localhost-startStop-1] INFO  AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_66\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.8.0_66\jre\bin;C:/Program Files/Java/jre1.8.0_66/bin/server;C:/Program Files/Java/jre1.8.0_66/bin;C:/Program Files/Java/jre1.8.0_66/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Docker\Docker\Resources\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_66\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\TortoiseSVN\bin;E:\software\apache-maven-3.5.0\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm;C:\Users\Administrator\AppData\Local\BypassRuntm;E:\software\eclipse;;.]
+17:53:47.626 [localhost-startStop-1] INFO  TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+17:53:47.635 [localhost-startStop-1] INFO  [/] - Initializing Spring embedded WebApplicationContext
+17:53:47.636 [localhost-startStop-1] INFO  ContextLoader - Root WebApplicationContext: initialization completed in 6878 ms
+17:53:47.921 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+17:53:47.922 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+17:53:47.922 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+17:53:47.922 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+17:53:47.924 [localhost-startStop-1] INFO  DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+17:53:47.924 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'corsFilter' to: [/*]
+17:53:47.925 [localhost-startStop-1] INFO  ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+17:53:50.266 [main] INFO  SysConfig - 通过init方法初始化各种配置参数
+17:53:50.307 [main] INFO  HikariDataSource - HikariPool-1 - Starting...
+17:53:50.675 [main] INFO  HikariDataSource - HikariPool-1 - Start completed.
+17:53:51.717 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/api/login],methods=[POST]}" onto public net.newglobe.app.model.vo.DataResult<java.lang.String> net.newglobe.app.controller.api.ApiLoginController.apiLogin(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String)
+17:53:51.720 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/api/isLogin],methods=[POST]}" onto public net.newglobe.app.model.vo.Result net.newglobe.app.controller.api.ApiLoginController.isLogin(java.lang.String)
+17:53:51.721 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/error/{errorCode}]}" onto public net.newglobe.app.model.vo.Result net.newglobe.app.controller.ErrorController.index(javax.servlet.http.HttpServletRequest,java.lang.String)
+17:53:51.722 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/error/{errorCode}],produces=[html/text]}" onto public java.lang.String net.newglobe.app.controller.ErrorController.htmlError(javax.servlet.http.HttpServletRequest,java.lang.String)
+17:53:51.723 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/index || ]}" onto public java.lang.String net.newglobe.app.controller.IndexController.index(javax.servlet.http.HttpServletRequest)
+17:53:51.724 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/getCode]}" onto public void net.newglobe.app.controller.LoginController.defaultKaptcha(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+17:53:51.725 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/login]}" onto public java.lang.String net.newglobe.app.controller.LoginController.login(javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpServletRequest)
+17:53:51.739 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+17:53:51.741 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+17:53:51.743 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+17:53:51.750 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+17:53:51.751 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+17:53:52.645 [main] INFO  PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+17:53:53.343 [main] INFO  DefaultSecurityFilterChain - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@45c5cd9a, org.springframework.security.web.context.SecurityContextPersistenceFilter@2fc378cd, org.springframework.security.web.header.HeaderWriterFilter@311683ea, org.springframework.security.web.authentication.logout.LogoutFilter@4cc070c2, net.newglobe.security.ValidateCodeFilter@858bf8c, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@53a74970, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7b886bd3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1d413e98, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@4a544672, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@30c1447e, org.springframework.security.web.session.SessionManagementFilter@5d5ad1e2, org.springframework.security.web.access.ExceptionTranslationFilter@579071ef, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@55785ee7]
+17:54:07.752 [main] INFO  XmlBeanDefinitionReader - Loading XML bean definitions from class path resource [org/springframework/jdbc/support/sql-error-codes.xml]
+17:54:07.846 [main] WARN  AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'persistentTokenRepository' defined in class path resource [net/newglobe/config/WebSecurityConfig.class]: Invocation of init method failed; nested exception is org.springframework.beans.factory.BeanInitializationException: Initialization of DAO failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: StatementCallback; bad SQL grammar [create table persistent_logins (username varchar(64) not null, series varchar(64) primary key, token varchar(64) not null, last_used timestamp not null)]; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'persistent_logins' already exists
+17:54:07.908 [main] INFO  HikariDataSource - HikariPool-1 - Shutdown initiated...
+17:54:07.931 [main] INFO  HikariDataSource - HikariPool-1 - Shutdown completed.
+17:54:07.941 [main] INFO  StandardService - Stopping service [Tomcat]
+17:54:08.001 [main] INFO  ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+17:54:08.020 [main] ERROR SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'persistentTokenRepository' defined in class path resource [net/newglobe/config/WebSecurityConfig.class]: Invocation of init method failed; nested exception is org.springframework.beans.factory.BeanInitializationException: Initialization of DAO failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: StatementCallback; bad SQL grammar [create table persistent_logins (username varchar(64) not null, series varchar(64) primary key, token varchar(64) not null, last_used timestamp not null)]; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'persistent_logins' already exists
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1694)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:573)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:495)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:317)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:315)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:759)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:867)
+	at org.springframework.context.support.AbstractApplicationContext.__refresh(AbstractApplicationContext.java:548)
+	at org.springframework.context.support.AbstractApplicationContext.jrLockAndRefresh(AbstractApplicationContext.java:40002)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:41008)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:386)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1242)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1230)
+	at net.newglobe.ApiApplication.main(ApiApplication.java:12)
+Caused by: org.springframework.beans.factory.BeanInitializationException: Initialization of DAO failed; nested exception is org.springframework.jdbc.BadSqlGrammarException: StatementCallback; bad SQL grammar [create table persistent_logins (username varchar(64) not null, series varchar(64) primary key, token varchar(64) not null, last_used timestamp not null)]; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'persistent_logins' already exists
+	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:51)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1753)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1690)
+	... 18 common frames omitted
+Caused by: org.springframework.jdbc.BadSqlGrammarException: StatementCallback; bad SQL grammar [create table persistent_logins (username varchar(64) not null, series varchar(64) primary key, token varchar(64) not null, last_used timestamp not null)]; nested exception is com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'persistent_logins' already exists
+	at org.springframework.jdbc.support.SQLExceptionSubclassTranslator.doTranslate(SQLExceptionSubclassTranslator.java:93)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:72)
+	at org.springframework.jdbc.support.AbstractFallbackSQLExceptionTranslator.translate(AbstractFallbackSQLExceptionTranslator.java:81)
+	at org.springframework.jdbc.core.JdbcTemplate.translateException(JdbcTemplate.java:1398)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:388)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:415)
+	at org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl.initDao(JdbcTokenRepositoryImpl.java:62)
+	at org.springframework.dao.support.DaoSupport.afterPropertiesSet(DaoSupport.java:48)
+	... 20 common frames omitted
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Table 'persistent_logins' already exists
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.__newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45009)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45012)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.Util.getInstance(Util.java:408)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:944)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3978)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3914)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2530)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2683)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2491)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2449)
+	at com.mysql.jdbc.StatementImpl.executeInternal(StatementImpl.java:845)
+	at com.mysql.jdbc.StatementImpl.execute(StatementImpl.java:745)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.springframework.jdbc.core.JdbcTemplate$1ExecuteStatementCallback.doInStatement(JdbcTemplate.java:406)
+	at org.springframework.jdbc.core.JdbcTemplate.execute(JdbcTemplate.java:376)
+	... 23 common frames omitted
+17:56:01.458 [main] INFO  ApiApplication - Starting ApiApplication on DESKTOP-82PPJKR with PID 12540 (E:\project\eclipse\springboot-parent\springboot-api\target\classes started by Administrator in E:\project\eclipse\springboot-parent\springboot-api)
+17:56:01.467 [main] INFO  ApiApplication - The following profiles are active: dev
+17:56:01.595 [main] INFO  AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7bebcd65: startup date [Tue Sep 10 17:56:01 CST 2019]; root of context hierarchy
+17:56:04.133 [main] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[net.newglobe]' package. Please check your configuration.
+17:56:04.286 [main] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+17:56:04.447 [main] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+17:56:05.895 [main] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$58b86285] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:56:06.027 [main] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$924ca457] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+17:56:07.355 [main] INFO  TomcatWebServer - Tomcat initialized with port(s): 8089 (http)
+17:56:07.387 [main] INFO  Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+17:56:07.419 [main] INFO  StandardService - Starting service [Tomcat]
+17:56:07.419 [main] INFO  StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.37
+17:56:07.432 [localhost-startStop-1] INFO  AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_66\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.8.0_66\jre\bin;C:/Program Files/Java/jre1.8.0_66/bin/server;C:/Program Files/Java/jre1.8.0_66/bin;C:/Program Files/Java/jre1.8.0_66/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Docker\Docker\Resources\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_66\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\TortoiseSVN\bin;E:\software\apache-maven-3.5.0\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm;C:\Users\Administrator\AppData\Local\BypassRuntm;E:\software\eclipse;;.]
+17:56:08.266 [localhost-startStop-1] INFO  TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+17:56:08.276 [localhost-startStop-1] INFO  [/] - Initializing Spring embedded WebApplicationContext
+17:56:08.277 [localhost-startStop-1] INFO  ContextLoader - Root WebApplicationContext: initialization completed in 6682 ms
+17:56:08.555 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+17:56:08.556 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+17:56:08.556 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+17:56:08.556 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+17:56:08.558 [localhost-startStop-1] INFO  DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+17:56:08.558 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'corsFilter' to: [/*]
+17:56:08.558 [localhost-startStop-1] INFO  ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+17:56:26.515 [main] INFO  SysConfig - 通过init方法初始化各种配置参数
+17:56:26.573 [main] INFO  HikariDataSource - HikariPool-1 - Starting...
+17:56:27.058 [main] INFO  HikariDataSource - HikariPool-1 - Start completed.
+17:56:28.098 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/api/login],methods=[POST]}" onto public net.newglobe.app.model.vo.DataResult<java.lang.String> net.newglobe.app.controller.api.ApiLoginController.apiLogin(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String)
+17:56:28.101 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/api/isLogin],methods=[POST]}" onto public net.newglobe.app.model.vo.Result net.newglobe.app.controller.api.ApiLoginController.isLogin(java.lang.String)
+17:56:28.103 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/error/{errorCode}]}" onto public net.newglobe.app.model.vo.Result net.newglobe.app.controller.ErrorController.index(javax.servlet.http.HttpServletRequest,java.lang.String)
+17:56:28.104 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/error/{errorCode}],produces=[html/text]}" onto public java.lang.String net.newglobe.app.controller.ErrorController.htmlError(javax.servlet.http.HttpServletRequest,java.lang.String)
+17:56:28.106 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/index || ]}" onto public java.lang.String net.newglobe.app.controller.IndexController.index(javax.servlet.http.HttpServletRequest)
+17:56:28.108 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/login]}" onto public java.lang.String net.newglobe.app.controller.LoginController.login(javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpServletRequest)
+17:56:28.109 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/getCode]}" onto public void net.newglobe.app.controller.LoginController.defaultKaptcha(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+17:56:28.121 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+17:56:28.125 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+17:56:28.126 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+17:56:28.135 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+17:56:28.135 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+17:56:29.043 [main] INFO  PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+17:56:29.774 [main] INFO  DefaultSecurityFilterChain - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@16337c8e, org.springframework.security.web.context.SecurityContextPersistenceFilter@47864b2e, org.springframework.security.web.header.HeaderWriterFilter@a263df9, org.springframework.security.web.authentication.logout.LogoutFilter@4df3b838, net.newglobe.security.ValidateCodeFilter@2603a76d, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@3821a012, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@61a809ee, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@74ed11d7, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@142dbf1a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@3022287e, org.springframework.security.web.session.SessionManagementFilter@33d828b3, org.springframework.security.web.access.ExceptionTranslationFilter@8c940e2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6f67312d]
+17:56:30.412 [main] INFO  RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7bebcd65: startup date [Tue Sep 10 17:56:01 CST 2019]; root of context hierarchy
+17:56:30.576 [main] INFO  SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:56:30.577 [main] INFO  SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+17:56:30.625 [main] INFO  ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in globleExceptionFilter
+17:56:30.715 [main] INFO  WelcomePageHandlerMapping - Adding welcome page template: index
+17:56:32.443 [main] INFO  StdSchedulerFactory - Using default implementation for ThreadExecutor
+17:56:32.491 [main] INFO  SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+17:56:32.492 [main] INFO  QuartzScheduler - Quartz Scheduler v.2.3.0 created.
+17:56:32.493 [main] INFO  RAMJobStore - RAMJobStore initialized.
+17:56:32.496 [main] INFO  QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+17:56:32.497 [main] INFO  StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+17:56:32.497 [main] INFO  StdSchedulerFactory - Quartz scheduler version: 2.3.0
+17:56:32.497 [main] INFO  QuartzScheduler - JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@3cc9957d
+17:56:32.766 [main] INFO  AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+17:56:32.769 [main] INFO  AnnotationMBeanExporter - Bean with name 'dataSourceMysql' has been autodetected for JMX exposure
+17:56:32.792 [main] INFO  AnnotationMBeanExporter - Bean with name 'rabbitConnectionFactory' has been autodetected for JMX exposure
+17:56:32.799 [main] INFO  AnnotationMBeanExporter - Located MBean 'dataSourceMysql': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSourceMysql,type=HikariDataSource]
+17:56:32.802 [main] INFO  AnnotationMBeanExporter - Located managed bean 'rabbitConnectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=rabbitConnectionFactory,type=CachingConnectionFactory]
+17:56:32.858 [main] INFO  DefaultLifecycleProcessor - Starting beans in phase 2147483647
+17:56:32.859 [main] INFO  DocumentationPluginsBootstrapper - Context refreshed
+17:56:32.909 [main] INFO  DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+17:56:33.014 [main] INFO  ApiListingReferenceScanner - Scanning for api listing references
+17:56:33.396 [main] INFO  SchedulerFactoryBean - Starting Quartz Scheduler now
+17:56:33.396 [main] INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+17:56:33.414 [main] INFO  ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+17:56:33.434 [main] INFO  Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"]
+17:56:33.459 [main] INFO  NioSelectorPool - Using a shared selector for servlet write/read
+17:56:33.604 [main] INFO  TomcatWebServer - Tomcat started on port(s): 8089 (http) with context path ''
+17:56:33.629 [main] INFO  ApiApplication - Started ApiApplication in 33.173 seconds (JVM running for 43.291)
+17:56:51.348 [http-nio-8089-exec-1] INFO  [/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+17:56:51.349 [http-nio-8089-exec-1] INFO  DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+17:56:51.388 [http-nio-8089-exec-1] INFO  DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 39 ms
+17:57:13.495 [http-nio-8089-exec-6] INFO  MyUserDetailsService - root
+17:57:20.843 [http-nio-8089-exec-5] INFO  MyUserDetailsService - root
+17:59:35.908 [http-nio-8089-exec-5] INFO  MyUserDetailsService - root
+17:59:48.826 [http-nio-8089-exec-5] ERROR [dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.lang.IllegalStateException: UserDetailsService is required.
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$UserDetailsServiceDelegator.loadUserByUsername(WebSecurityConfigurerAdapter.java:464)
+	at org.springframework.security.web.authentication.rememberme.PersistentTokenBasedRememberMeServices.processAutoLoginCookie(PersistentTokenBasedRememberMeServices.java:150)
+	at org.springframework.security.web.authentication.rememberme.AbstractRememberMeServices.autoLogin(AbstractRememberMeServices.java:136)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:98)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at net.newglobe.security.ValidateCodeFilter.doFilterInternal(ValidateCodeFilter.java:38)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.__invoke(StandardContextValve.java:96)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:41002)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+17:59:48.839 [http-nio-8089-exec-5] ERROR [dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] threw exception
+org.springframework.security.web.authentication.rememberme.CookieTheftException: Invalid remember-me token (Series/token) mismatch. Implies previous cookie theft attack.
+	at org.springframework.security.web.authentication.rememberme.PersistentTokenBasedRememberMeServices.processAutoLoginCookie(PersistentTokenBasedRememberMeServices.java:119)
+	at org.springframework.security.web.authentication.rememberme.AbstractRememberMeServices.autoLogin(AbstractRememberMeServices.java:136)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:98)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:728)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:472)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:395)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:316)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:395)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:254)
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:349)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+17:59:48.842 [http-nio-8089-exec-5] ERROR [localhost] - Exception Processing ErrorPage[errorCode=0, location=/error]
+org.springframework.security.web.authentication.rememberme.CookieTheftException: Invalid remember-me token (Series/token) mismatch. Implies previous cookie theft attack.
+	at org.springframework.security.web.authentication.rememberme.PersistentTokenBasedRememberMeServices.processAutoLoginCookie(PersistentTokenBasedRememberMeServices.java:119)
+	at org.springframework.security.web.authentication.rememberme.AbstractRememberMeServices.autoLogin(AbstractRememberMeServices.java:136)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:98)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:728)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:472)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:395)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:316)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:395)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:254)
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:349)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+18:00:10.917 [RMI TCP Connection(2)-127.0.0.1] INFO  SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+18:00:10.918 [RMI TCP Connection(2)-127.0.0.1] INFO  AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@7bebcd65: startup date [Tue Sep 10 17:56:01 CST 2019]; root of context hierarchy
+18:00:11.073 [RMI TCP Connection(2)-127.0.0.1] INFO  DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+18:00:11.077 [RMI TCP Connection(2)-127.0.0.1] INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+18:00:11.080 [RMI TCP Connection(2)-127.0.0.1] INFO  DefaultLifecycleProcessor - Stopping beans in phase 0
+18:00:11.208 [RMI TCP Connection(2)-127.0.0.1] INFO  SchedulerFactoryBean - Shutting down Quartz Scheduler
+18:00:11.209 [RMI TCP Connection(2)-127.0.0.1] INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+18:00:11.209 [RMI TCP Connection(2)-127.0.0.1] INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+18:00:11.221 [RMI TCP Connection(2)-127.0.0.1] INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+18:00:11.251 [RMI TCP Connection(2)-127.0.0.1] INFO  AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+18:00:11.254 [RMI TCP Connection(2)-127.0.0.1] INFO  AnnotationMBeanExporter - Unregistering JMX-exposed beans
+18:00:12.393 [RMI TCP Connection(2)-127.0.0.1] INFO  HikariDataSource - HikariPool-1 - Shutdown initiated...
+18:00:12.471 [RMI TCP Connection(2)-127.0.0.1] INFO  HikariDataSource - HikariPool-1 - Shutdown completed.
+18:00:36.137 [main] INFO  ApiApplication - Starting ApiApplication on DESKTOP-82PPJKR with PID 11084 (E:\project\eclipse\springboot-parent\springboot-api\target\classes started by Administrator in E:\project\eclipse\springboot-parent\springboot-api)
+18:00:36.145 [main] INFO  ApiApplication - The following profiles are active: dev
+18:00:36.279 [main] INFO  AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2eb917d0: startup date [Tue Sep 10 18:00:36 CST 2019]; root of context hierarchy
+18:00:38.843 [main] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[net.newglobe]' package. Please check your configuration.
+18:00:39.021 [main] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+18:00:39.236 [main] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+18:00:40.737 [main] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$802cb783] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18:00:40.912 [main] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b9c0f955] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18:00:42.321 [main] INFO  TomcatWebServer - Tomcat initialized with port(s): 8089 (http)
+18:00:42.355 [main] INFO  Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+18:00:42.384 [main] INFO  StandardService - Starting service [Tomcat]
+18:00:42.385 [main] INFO  StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.37
+18:00:42.407 [localhost-startStop-1] INFO  AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_66\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.8.0_66\jre\bin;C:/Program Files/Java/jre1.8.0_66/bin/server;C:/Program Files/Java/jre1.8.0_66/bin;C:/Program Files/Java/jre1.8.0_66/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Docker\Docker\Resources\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_66\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\TortoiseSVN\bin;E:\software\apache-maven-3.5.0\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm;C:\Users\Administrator\AppData\Local\BypassRuntm;E:\software\eclipse;;.]
+18:00:43.236 [localhost-startStop-1] INFO  TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+18:00:43.247 [localhost-startStop-1] INFO  [/] - Initializing Spring embedded WebApplicationContext
+18:00:43.248 [localhost-startStop-1] INFO  ContextLoader - Root WebApplicationContext: initialization completed in 6969 ms
+18:00:43.556 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+18:00:43.557 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+18:00:43.557 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+18:00:43.557 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+18:00:43.559 [localhost-startStop-1] INFO  DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+18:00:43.559 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'corsFilter' to: [/*]
+18:00:43.559 [localhost-startStop-1] INFO  ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+18:00:49.584 [main] INFO  SysConfig - 通过init方法初始化各种配置参数
+18:00:49.649 [main] INFO  HikariDataSource - HikariPool-1 - Starting...
+18:00:50.065 [main] INFO  HikariDataSource - HikariPool-1 - Start completed.
+18:00:51.094 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/api/isLogin],methods=[POST]}" onto public net.newglobe.app.model.vo.Result net.newglobe.app.controller.api.ApiLoginController.isLogin(java.lang.String)
+18:00:51.096 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/api/login],methods=[POST]}" onto public net.newglobe.app.model.vo.DataResult<java.lang.String> net.newglobe.app.controller.api.ApiLoginController.apiLogin(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String)
+18:00:51.098 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/error/{errorCode}]}" onto public net.newglobe.app.model.vo.Result net.newglobe.app.controller.ErrorController.index(javax.servlet.http.HttpServletRequest,java.lang.String)
+18:00:51.099 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/error/{errorCode}],produces=[html/text]}" onto public java.lang.String net.newglobe.app.controller.ErrorController.htmlError(javax.servlet.http.HttpServletRequest,java.lang.String)
+18:00:51.100 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/index || ]}" onto public java.lang.String net.newglobe.app.controller.IndexController.index(javax.servlet.http.HttpServletRequest)
+18:00:51.102 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/login]}" onto public java.lang.String net.newglobe.app.controller.LoginController.login(javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpServletRequest)
+18:00:51.103 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/getCode]}" onto public void net.newglobe.app.controller.LoginController.defaultKaptcha(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+18:00:51.115 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+18:00:51.116 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+18:00:51.117 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+18:00:51.127 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+18:00:51.127 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+18:00:52.019 [main] INFO  PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+18:00:52.701 [main] INFO  DefaultSecurityFilterChain - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@25ea3a5f, org.springframework.security.web.context.SecurityContextPersistenceFilter@4057babc, org.springframework.security.web.header.HeaderWriterFilter@2b991034, org.springframework.security.web.authentication.logout.LogoutFilter@7d461450, net.newglobe.security.ValidateCodeFilter@5503e208, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@75ee63f2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7bbc3b6e, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@9d818b5, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@356c8c1b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5225f612, org.springframework.security.web.session.SessionManagementFilter@db9ecd, org.springframework.security.web.access.ExceptionTranslationFilter@1e3f0c5c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@473ee461]
+18:00:53.502 [main] INFO  RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2eb917d0: startup date [Tue Sep 10 18:00:36 CST 2019]; root of context hierarchy
+18:00:53.691 [main] INFO  SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+18:00:53.692 [main] INFO  SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+18:00:53.738 [main] INFO  ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in globleExceptionFilter
+18:00:53.834 [main] INFO  WelcomePageHandlerMapping - Adding welcome page template: index
+18:00:55.812 [main] INFO  StdSchedulerFactory - Using default implementation for ThreadExecutor
+18:00:55.883 [main] INFO  SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+18:00:55.885 [main] INFO  QuartzScheduler - Quartz Scheduler v.2.3.0 created.
+18:00:55.889 [main] INFO  RAMJobStore - RAMJobStore initialized.
+18:00:55.893 [main] INFO  QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+18:00:55.895 [main] INFO  StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+18:00:55.895 [main] INFO  StdSchedulerFactory - Quartz scheduler version: 2.3.0
+18:00:55.897 [main] INFO  QuartzScheduler - JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@2a801d1e
+18:00:56.218 [main] INFO  AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+18:00:56.221 [main] INFO  AnnotationMBeanExporter - Bean with name 'dataSourceMysql' has been autodetected for JMX exposure
+18:00:56.260 [main] INFO  AnnotationMBeanExporter - Bean with name 'rabbitConnectionFactory' has been autodetected for JMX exposure
+18:00:56.270 [main] INFO  AnnotationMBeanExporter - Located MBean 'dataSourceMysql': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSourceMysql,type=HikariDataSource]
+18:00:56.280 [main] INFO  AnnotationMBeanExporter - Located managed bean 'rabbitConnectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=rabbitConnectionFactory,type=CachingConnectionFactory]
+18:00:56.337 [main] INFO  DefaultLifecycleProcessor - Starting beans in phase 2147483647
+18:00:56.338 [main] INFO  DocumentationPluginsBootstrapper - Context refreshed
+18:00:56.386 [main] INFO  DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+18:00:56.498 [main] INFO  ApiListingReferenceScanner - Scanning for api listing references
+18:00:56.919 [main] INFO  SchedulerFactoryBean - Starting Quartz Scheduler now
+18:00:56.919 [main] INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+18:00:56.939 [main] INFO  ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+18:00:56.960 [main] INFO  Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"]
+18:00:56.999 [main] INFO  NioSelectorPool - Using a shared selector for servlet write/read
+18:00:57.105 [main] INFO  TomcatWebServer - Tomcat started on port(s): 8089 (http) with context path ''
+18:00:57.128 [main] INFO  ApiApplication - Started ApiApplication in 22.017 seconds (JVM running for 32.969)
+18:00:57.328 [http-nio-8089-exec-1] INFO  [/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+18:00:57.328 [http-nio-8089-exec-1] INFO  DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+18:00:57.367 [http-nio-8089-exec-1] INFO  DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 38 ms
+18:01:09.328 [http-nio-8089-exec-9] INFO  MyUserDetailsService - root
+18:01:30.067 [http-nio-8089-exec-9] ERROR [dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.lang.IllegalStateException: UserDetailsService is required.
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$UserDetailsServiceDelegator.loadUserByUsername(WebSecurityConfigurerAdapter.java:464)
+	at org.springframework.security.web.authentication.rememberme.PersistentTokenBasedRememberMeServices.processAutoLoginCookie(PersistentTokenBasedRememberMeServices.java:150)
+	at org.springframework.security.web.authentication.rememberme.AbstractRememberMeServices.autoLogin(AbstractRememberMeServices.java:136)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:98)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at net.newglobe.security.ValidateCodeFilter.doFilterInternal(ValidateCodeFilter.java:38)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.__invoke(StandardContextValve.java:96)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:41002)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+18:01:30.093 [http-nio-8089-exec-9] ERROR [dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] threw exception
+org.springframework.security.web.authentication.rememberme.CookieTheftException: Invalid remember-me token (Series/token) mismatch. Implies previous cookie theft attack.
+	at org.springframework.security.web.authentication.rememberme.PersistentTokenBasedRememberMeServices.processAutoLoginCookie(PersistentTokenBasedRememberMeServices.java:119)
+	at org.springframework.security.web.authentication.rememberme.AbstractRememberMeServices.autoLogin(AbstractRememberMeServices.java:136)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:98)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:728)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:472)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:395)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:316)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:395)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:254)
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:349)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+18:01:30.097 [http-nio-8089-exec-9] ERROR [localhost] - Exception Processing ErrorPage[errorCode=0, location=/error]
+org.springframework.security.web.authentication.rememberme.CookieTheftException: Invalid remember-me token (Series/token) mismatch. Implies previous cookie theft attack.
+	at org.springframework.security.web.authentication.rememberme.PersistentTokenBasedRememberMeServices.processAutoLoginCookie(PersistentTokenBasedRememberMeServices.java:119)
+	at org.springframework.security.web.authentication.rememberme.AbstractRememberMeServices.autoLogin(AbstractRememberMeServices.java:136)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:98)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:728)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:472)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:395)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:316)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:395)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:254)
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:349)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+18:01:51.046 [http-nio-8089-exec-8] INFO  MyUserDetailsService - root
+18:02:05.754 [http-nio-8089-exec-3] ERROR [dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+java.lang.IllegalStateException: UserDetailsService is required.
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter$UserDetailsServiceDelegator.loadUserByUsername(WebSecurityConfigurerAdapter.java:464)
+	at org.springframework.security.web.authentication.rememberme.PersistentTokenBasedRememberMeServices.processAutoLoginCookie(PersistentTokenBasedRememberMeServices.java:150)
+	at org.springframework.security.web.authentication.rememberme.AbstractRememberMeServices.autoLogin(AbstractRememberMeServices.java:136)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:98)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at net.newglobe.security.ValidateCodeFilter.doFilterInternal(ValidateCodeFilter.java:38)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HttpPutFormContentFilter.doFilterInternal(HttpPutFormContentFilter.java:109)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.__invoke(StandardContextValve.java:96)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:41002)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+18:02:05.768 [http-nio-8089-exec-3] ERROR [dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] threw exception
+org.springframework.security.web.authentication.rememberme.CookieTheftException: Invalid remember-me token (Series/token) mismatch. Implies previous cookie theft attack.
+	at org.springframework.security.web.authentication.rememberme.PersistentTokenBasedRememberMeServices.processAutoLoginCookie(PersistentTokenBasedRememberMeServices.java:119)
+	at org.springframework.security.web.authentication.rememberme.AbstractRememberMeServices.autoLogin(AbstractRememberMeServices.java:136)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:98)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:728)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:472)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:395)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:316)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:395)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:254)
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:349)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+18:02:05.770 [http-nio-8089-exec-3] ERROR [localhost] - Exception Processing ErrorPage[errorCode=0, location=/error]
+org.springframework.security.web.authentication.rememberme.CookieTheftException: Invalid remember-me token (Series/token) mismatch. Implies previous cookie theft attack.
+	at org.springframework.security.web.authentication.rememberme.PersistentTokenBasedRememberMeServices.processAutoLoginCookie(PersistentTokenBasedRememberMeServices.java:119)
+	at org.springframework.security.web.authentication.rememberme.AbstractRememberMeServices.autoLogin(AbstractRememberMeServices.java:136)
+	at org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter.doFilter(RememberMeAuthenticationFilter.java:98)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AbstractAuthenticationProcessingFilter.doFilter(AbstractAuthenticationProcessingFilter.java:200)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:101)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.ApplicationDispatcher.invoke(ApplicationDispatcher.java:728)
+	at org.apache.catalina.core.ApplicationDispatcher.processRequest(ApplicationDispatcher.java:472)
+	at org.apache.catalina.core.ApplicationDispatcher.doForward(ApplicationDispatcher.java:395)
+	at org.apache.catalina.core.ApplicationDispatcher.forward(ApplicationDispatcher.java:316)
+	at org.apache.catalina.core.StandardHostValve.custom(StandardHostValve.java:395)
+	at org.apache.catalina.core.StandardHostValve.status(StandardHostValve.java:254)
+	at org.apache.catalina.core.StandardHostValve.throwable(StandardHostValve.java:349)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:175)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:745)
+18:02:40.284 [RMI TCP Connection(2)-127.0.0.1] INFO  SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+18:02:40.285 [RMI TCP Connection(2)-127.0.0.1] INFO  AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@2eb917d0: startup date [Tue Sep 10 18:00:36 CST 2019]; root of context hierarchy
+18:02:40.320 [RMI TCP Connection(2)-127.0.0.1] INFO  DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+18:02:40.325 [RMI TCP Connection(2)-127.0.0.1] INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+18:02:40.327 [RMI TCP Connection(2)-127.0.0.1] INFO  DefaultLifecycleProcessor - Stopping beans in phase 0
+18:02:40.353 [RMI TCP Connection(2)-127.0.0.1] INFO  SchedulerFactoryBean - Shutting down Quartz Scheduler
+18:02:40.359 [RMI TCP Connection(2)-127.0.0.1] INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+18:02:40.359 [RMI TCP Connection(2)-127.0.0.1] INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+18:02:40.363 [RMI TCP Connection(2)-127.0.0.1] INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+18:02:40.382 [RMI TCP Connection(2)-127.0.0.1] INFO  AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+18:02:40.387 [RMI TCP Connection(2)-127.0.0.1] INFO  AnnotationMBeanExporter - Unregistering JMX-exposed beans
+18:02:40.433 [pool-4-thread-1] INFO  DefaultListableBeanFactory - Overriding bean definition for bean 'webSecurityConfig' with a different definition: replacing [Generic bean: class [net.newglobe.config.WebSecurityConfig$$EnhancerBySpringCGLIB$$4b65b3b4]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [E:\project\eclipse\springboot-parent\springboot-api\target\classes\net\newglobe\config\WebSecurityConfig.class]] with [Generic bean: class [net.newglobe.config.WebSecurityConfig]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [E:\project\eclipse\springboot-parent\springboot-api\target\classes\net\newglobe\config\WebSecurityConfig.class]]
+18:02:40.582 [RMI TCP Connection(2)-127.0.0.1] INFO  HikariDataSource - HikariPool-1 - Shutdown initiated...
+18:02:40.664 [RMI TCP Connection(2)-127.0.0.1] INFO  HikariDataSource - HikariPool-1 - Shutdown completed.
+18:03:11.032 [main] INFO  ApiApplication - Starting ApiApplication on DESKTOP-82PPJKR with PID 6524 (E:\project\eclipse\springboot-parent\springboot-api\target\classes started by Administrator in E:\project\eclipse\springboot-parent\springboot-api)
+18:03:11.041 [main] INFO  ApiApplication - The following profiles are active: dev
+18:03:11.177 [main] INFO  AnnotationConfigServletWebServerApplicationContext - Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@31ff6309: startup date [Tue Sep 10 18:03:11 CST 2019]; root of context hierarchy
+18:03:13.584 [main] WARN  ClassPathMapperScanner - No MyBatis mapper was found in '[net.newglobe]' package. Please check your configuration.
+18:03:13.731 [main] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+18:03:13.883 [main] INFO  RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+18:03:15.306 [main] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration' of type [org.springframework.amqp.rabbit.annotation.RabbitBootstrapConfiguration$$EnhancerBySpringCGLIB$$f4bdb2cc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18:03:15.440 [main] INFO  PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2e51f49e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+18:03:16.800 [main] INFO  TomcatWebServer - Tomcat initialized with port(s): 8089 (http)
+18:03:16.833 [main] INFO  Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8089"]
+18:03:16.864 [main] INFO  StandardService - Starting service [Tomcat]
+18:03:16.864 [main] INFO  StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.37
+18:03:16.877 [localhost-startStop-1] INFO  AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_66\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Java\jdk1.8.0_66\jre\bin;C:/Program Files/Java/jre1.8.0_66/bin/server;C:/Program Files/Java/jre1.8.0_66/bin;C:/Program Files/Java/jre1.8.0_66/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Docker\Docker\Resources\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_66\bin;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Git\cmd;C:\Program Files\TortoiseSVN\bin;E:\software\apache-maven-3.5.0\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm;C:\Users\Administrator\AppData\Local\BypassRuntm;E:\software\eclipse;;.]
+18:03:17.651 [localhost-startStop-1] INFO  TldScanner - At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+18:03:17.660 [localhost-startStop-1] INFO  [/] - Initializing Spring embedded WebApplicationContext
+18:03:17.660 [localhost-startStop-1] INFO  ContextLoader - Root WebApplicationContext: initialization completed in 6483 ms
+18:03:17.922 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+18:03:17.923 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+18:03:17.923 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+18:03:17.923 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+18:03:17.925 [localhost-startStop-1] INFO  DelegatingFilterProxyRegistrationBean - Mapping filter: 'springSecurityFilterChain' to: [/*]
+18:03:17.925 [localhost-startStop-1] INFO  FilterRegistrationBean - Mapping filter: 'corsFilter' to: [/*]
+18:03:17.925 [localhost-startStop-1] INFO  ServletRegistrationBean - Servlet dispatcherServlet mapped to [/]
+18:03:20.163 [main] INFO  SysConfig - 通过init方法初始化各种配置参数
+18:03:20.233 [main] INFO  HikariDataSource - HikariPool-1 - Starting...
+18:03:20.580 [main] INFO  HikariDataSource - HikariPool-1 - Start completed.
+18:03:21.471 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/api/login],methods=[POST]}" onto public net.newglobe.app.model.vo.DataResult<java.lang.String> net.newglobe.app.controller.api.ApiLoginController.apiLogin(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse,java.lang.String,java.lang.String)
+18:03:21.473 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/api/isLogin],methods=[POST]}" onto public net.newglobe.app.model.vo.Result net.newglobe.app.controller.api.ApiLoginController.isLogin(java.lang.String)
+18:03:21.475 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/error/{errorCode}]}" onto public net.newglobe.app.model.vo.Result net.newglobe.app.controller.ErrorController.index(javax.servlet.http.HttpServletRequest,java.lang.String)
+18:03:21.476 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/error/{errorCode}],produces=[html/text]}" onto public java.lang.String net.newglobe.app.controller.ErrorController.htmlError(javax.servlet.http.HttpServletRequest,java.lang.String)
+18:03:21.478 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/index || ]}" onto public java.lang.String net.newglobe.app.controller.IndexController.index(javax.servlet.http.HttpServletRequest)
+18:03:21.479 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/login]}" onto public java.lang.String net.newglobe.app.controller.LoginController.login(javax.servlet.http.HttpServletResponse,javax.servlet.http.HttpServletRequest)
+18:03:21.480 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/getCode]}" onto public void net.newglobe.app.controller.LoginController.defaultKaptcha(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+18:03:21.493 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/ui]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.UiConfiguration> springfox.documentation.swagger.web.ApiResourceController.uiConfiguration()
+18:03:21.494 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/swagger-resources]}" onto public org.springframework.http.ResponseEntity<java.util.List<springfox.documentation.swagger.web.SwaggerResource>> springfox.documentation.swagger.web.ApiResourceController.swaggerResources()
+18:03:21.495 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/swagger-resources/configuration/security]}" onto public org.springframework.http.ResponseEntity<springfox.documentation.swagger.web.SecurityConfiguration> springfox.documentation.swagger.web.ApiResourceController.securityConfiguration()
+18:03:21.504 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+18:03:21.505 [main] INFO  RequestMappingHandlerMapping - Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+18:03:22.339 [main] INFO  PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+18:03:23.005 [main] INFO  DefaultSecurityFilterChain - Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@33e09baf, org.springframework.security.web.context.SecurityContextPersistenceFilter@522db06e, org.springframework.security.web.header.HeaderWriterFilter@3adbfd16, org.springframework.security.web.authentication.logout.LogoutFilter@56f1db5f, net.newglobe.security.ValidateCodeFilter@4c02f50, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@5f05cd7e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1dad97ed, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5f97d43e, org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter@25874884, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@35852b6, org.springframework.security.web.session.SessionManagementFilter@5672920, org.springframework.security.web.access.ExceptionTranslationFilter@541c32de, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4f8186a5]
+18:03:23.650 [main] INFO  RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@31ff6309: startup date [Tue Sep 10 18:03:11 CST 2019]; root of context hierarchy
+18:03:23.800 [main] INFO  SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+18:03:23.800 [main] INFO  SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+18:03:23.839 [main] INFO  ExceptionHandlerExceptionResolver - Detected @ExceptionHandler methods in globleExceptionFilter
+18:03:23.918 [main] INFO  WelcomePageHandlerMapping - Adding welcome page template: index
+18:03:25.581 [main] INFO  StdSchedulerFactory - Using default implementation for ThreadExecutor
+18:03:25.640 [main] INFO  SchedulerSignalerImpl - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+18:03:25.641 [main] INFO  QuartzScheduler - Quartz Scheduler v.2.3.0 created.
+18:03:25.644 [main] INFO  RAMJobStore - RAMJobStore initialized.
+18:03:25.646 [main] INFO  QuartzScheduler - Scheduler meta-data: Quartz Scheduler (v2.3.0) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+18:03:25.646 [main] INFO  StdSchedulerFactory - Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+18:03:25.646 [main] INFO  StdSchedulerFactory - Quartz scheduler version: 2.3.0
+18:03:25.647 [main] INFO  QuartzScheduler - JobFactory set to: org.springframework.boot.autoconfigure.quartz.AutowireCapableBeanJobFactory@1503ef2
+18:03:25.869 [main] INFO  AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+18:03:25.872 [main] INFO  AnnotationMBeanExporter - Bean with name 'dataSourceMysql' has been autodetected for JMX exposure
+18:03:25.895 [main] INFO  AnnotationMBeanExporter - Bean with name 'rabbitConnectionFactory' has been autodetected for JMX exposure
+18:03:25.902 [main] INFO  AnnotationMBeanExporter - Located MBean 'dataSourceMysql': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSourceMysql,type=HikariDataSource]
+18:03:25.908 [main] INFO  AnnotationMBeanExporter - Located managed bean 'rabbitConnectionFactory': registering with JMX server as MBean [org.springframework.amqp.rabbit.connection:name=rabbitConnectionFactory,type=CachingConnectionFactory]
+18:03:25.957 [main] INFO  DefaultLifecycleProcessor - Starting beans in phase 2147483647
+18:03:25.957 [main] INFO  DocumentationPluginsBootstrapper - Context refreshed
+18:03:26.001 [main] INFO  DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+18:03:26.098 [main] INFO  ApiListingReferenceScanner - Scanning for api listing references
+18:03:26.410 [main] INFO  SchedulerFactoryBean - Starting Quartz Scheduler now
+18:03:26.410 [main] INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED started.
+18:03:26.426 [main] INFO  ScheduledAnnotationBeanPostProcessor - No TaskScheduler/ScheduledExecutorService bean found for scheduled processing
+18:03:26.444 [main] INFO  Http11NioProtocol - Starting ProtocolHandler ["http-nio-8089"]
+18:03:26.470 [main] INFO  NioSelectorPool - Using a shared selector for servlet write/read
+18:03:26.541 [main] INFO  TomcatWebServer - Tomcat started on port(s): 8089 (http) with context path ''
+18:03:26.555 [main] INFO  ApiApplication - Started ApiApplication in 16.512 seconds (JVM running for 26.454)
+18:03:51.918 [http-nio-8089-exec-2] INFO  [/] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+18:03:51.918 [http-nio-8089-exec-2] INFO  DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization started
+18:03:51.962 [http-nio-8089-exec-2] INFO  DispatcherServlet - FrameworkServlet 'dispatcherServlet': initialization completed in 44 ms
+18:04:06.627 [http-nio-8089-exec-4] INFO  MyUserDetailsService - root
+18:04:33.790 [http-nio-8089-exec-4] INFO  MyUserDetailsService - root
+18:05:43.845 [http-nio-8089-exec-10] INFO  MyUserDetailsService - root
+18:43:06.557 [RMI TCP Connection(2)-127.0.0.1] INFO  SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+18:43:06.558 [RMI TCP Connection(2)-127.0.0.1] INFO  AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@31ff6309: startup date [Tue Sep 10 18:03:11 CST 2019]; root of context hierarchy
+18:43:06.574 [RMI TCP Connection(2)-127.0.0.1] INFO  DefaultLifecycleProcessor - Stopping beans in phase 2147483647
+18:43:06.577 [RMI TCP Connection(2)-127.0.0.1] INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+18:43:06.578 [RMI TCP Connection(2)-127.0.0.1] INFO  DefaultLifecycleProcessor - Stopping beans in phase 0
+18:43:06.596 [RMI TCP Connection(2)-127.0.0.1] INFO  SchedulerFactoryBean - Shutting down Quartz Scheduler
+18:43:06.596 [RMI TCP Connection(2)-127.0.0.1] INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+18:43:06.596 [RMI TCP Connection(2)-127.0.0.1] INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+18:43:06.597 [RMI TCP Connection(2)-127.0.0.1] INFO  QuartzScheduler - Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+18:43:06.623 [RMI TCP Connection(2)-127.0.0.1] INFO  AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+18:43:06.625 [RMI TCP Connection(2)-127.0.0.1] INFO  AnnotationMBeanExporter - Unregistering JMX-exposed beans
+18:43:06.788 [RMI TCP Connection(2)-127.0.0.1] INFO  HikariDataSource - HikariPool-1 - Shutdown initiated...
+18:43:06.810 [RMI TCP Connection(2)-127.0.0.1] INFO  HikariDataSource - HikariPool-1 - Shutdown completed.

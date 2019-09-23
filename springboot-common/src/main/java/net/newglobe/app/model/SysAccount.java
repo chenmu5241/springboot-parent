@@ -1,12 +1,16 @@
 package net.newglobe.app.model;
 
+import java.util.Collection;
 import java.util.List;
 
 import javax.persistence.Transient;
 
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
 import net.newglobe.app.model.vo.BaseModel;
 
-public class SysAccount extends BaseModel {
+public class SysAccount extends BaseModel  implements UserDetails{
 	
 	protected static final long serialVersionUID = 5172776809901424891L;
 
@@ -24,6 +28,20 @@ public class SysAccount extends BaseModel {
     private List<SysPower> powers;//所有权限
     @Transient//瞬时的，不作为数据库字段
     private List<SysRole> roles;//菜单权限
+    
+    /**
+     	*用户所拥有的权限
+     */
+    @Transient
+    private List<? extends GrantedAuthority> authorities;
+    @Transient
+    private final boolean accountNonExpired=true;
+    @Transient
+    private final boolean accountNonLocked=true;
+    @Transient
+    private final boolean credentialsNonExpired=true;
+    @Transient
+    private final boolean enabled=true;
     
     public String getUsername() {
         return username;
@@ -79,6 +97,35 @@ public class SysAccount extends BaseModel {
 
 	public void setRoot(boolean isRoot) {
 		this.isRoot = isRoot;
+	}
+
+	@Override
+	public Collection<? extends GrantedAuthority> getAuthorities() {
+		 return authorities;
+	}
+
+	@Override
+	public boolean isAccountNonExpired() {
+		 return accountNonExpired;
+	}
+
+	@Override
+	public boolean isAccountNonLocked() {
+		return accountNonLocked;
+	}
+
+	@Override
+	public boolean isCredentialsNonExpired() {
+		return credentialsNonExpired;
+	}
+
+	@Override
+	public boolean isEnabled() {
+		return enabled;
+	}
+
+	public void setAuthorities(List<? extends GrantedAuthority> authorities) {
+		this.authorities = authorities;
 	}
 
 }
