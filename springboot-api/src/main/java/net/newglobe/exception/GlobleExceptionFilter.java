@@ -9,6 +9,7 @@ import javax.validation.ValidationException;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.security.access.AccessDeniedException;
 import org.springframework.validation.BindException;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -24,14 +25,26 @@ public class GlobleExceptionFilter {
 
 	@ResponseBody
 	@ExceptionHandler(value = java.lang.Exception.class)
-	public ErrorResult myException(Exception ex) {
+	public ErrorResult exception(Exception ex) {
 		// 记录错误
-		logger.error("参数绑定异常:", ex);
-//		ex.printStackTrace();
-
+//		logger.error("异常:", ex);
+		ex.printStackTrace();
 		ErrorResult result = new ErrorResult();
 		result.setSuccess(false);
 		result.setMessage("遇到异常,请重试或联系管理员");
+		result.setErrorDetail(ex.getMessage());
+		return result;
+	}
+	
+	@ResponseBody
+	@ExceptionHandler(value = AccessDeniedException.class)
+	public ErrorResult accessDeniedException(Exception ex) {
+		// 记录错误
+//		logger.error("异常:", ex);
+		ex.printStackTrace();
+		ErrorResult result = new ErrorResult();
+		result.setSuccess(false);
+		result.setMessage("无权访问");
 		result.setErrorDetail(ex.getMessage());
 		return result;
 	}
@@ -46,8 +59,8 @@ public class GlobleExceptionFilter {
 	@ExceptionHandler(value = BindException.class)
 	public ErrorResult BindException(BindException ex) {
 		// 记录错误
-		logger.error("参数绑定异常:", ex);
-//		ex.printStackTrace();
+//		logger.error("参数绑定异常:", ex);
+		ex.printStackTrace();
 
 		List<FieldError> fieldErrors = ex.getFieldErrors();
 		List<String> list = new LinkedList<String>();
@@ -70,7 +83,7 @@ public class GlobleExceptionFilter {
 	@ResponseBody
 	@ExceptionHandler(value = SQLException.class)
 	public ErrorResult sqlException(Exception ex) {
-//		ex.printStackTrace();
+		ex.printStackTrace();
 		ErrorResult result = new ErrorResult();
 		result.setSuccess(false);
 		result.setMessage("sql执行异常");
@@ -88,8 +101,8 @@ public class GlobleExceptionFilter {
 	@ExceptionHandler(value = ValidationException.class)
 	public ErrorResult validationException(Exception ex) {
 		// 记录错误
-//		ex.printStackTrace();
-		logger.error("参数格式不符合要求:", ex);
+		ex.printStackTrace();
+//		logger.error("参数格式不符合要求:", ex);
 
 		ValidationException ex2 = (ValidationException) ex;
 		String localizedMessage = ex2.getLocalizedMessage();

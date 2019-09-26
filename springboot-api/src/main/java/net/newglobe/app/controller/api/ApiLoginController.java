@@ -1,5 +1,6 @@
 package net.newglobe.app.controller.api;
 
+import java.util.ArrayList;
 import java.util.Base64;
 
 import javax.servlet.http.HttpServletRequest;
@@ -8,6 +9,13 @@ import javax.validation.constraints.NotNull;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -46,7 +54,7 @@ public class ApiLoginController {
 	}
 	
 	@RequestMapping(value = "api/isLogin", method = RequestMethod.POST)
-	public Result isLogin(@NotNull(message="token不能为空") String token) {
+	public Result isLogin(String token1) {
 		Result result = new Result();
 		try {
 			result.setSuccess(true);
@@ -58,6 +66,5 @@ public class ApiLoginController {
 		}
 		return result;
 	}
-	
 
 }

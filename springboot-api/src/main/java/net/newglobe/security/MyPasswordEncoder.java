@@ -12,6 +12,7 @@ public class MyPasswordEncoder implements PasswordEncoder {
 	//数据库密码
     @Override
     public String encode(CharSequence charSequence) {
+    	System.out.println(charSequence);
         return charSequence.toString();
     }
 

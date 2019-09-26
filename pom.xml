@@ -6,6 +6,7 @@
   <packaging>pom</packaging>
   <modules>
   	<module>springboot-base</module>
+  	<module>springboot-manage</module>
   	<module>springboot-common</module>
   	
   	<module>springboot-upload</module>
