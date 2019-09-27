@@ -25,6 +25,8 @@ public class Bug extends BaseModel {
 	private Date startTime;
 	
 	private Date endTime;
+	
+	private Integer state;
 
 	public Long getProjectId() {
 		return projectId;
@@ -72,6 +74,14 @@ public class Bug extends BaseModel {
 
 	public void setEndTime(Date endTime) {
 		this.endTime = endTime;
+	}
+
+	public Integer getState() {
+		return state;
+	}
+
+	public void setState(Integer state) {
+		this.state = state;
 	}
 
 

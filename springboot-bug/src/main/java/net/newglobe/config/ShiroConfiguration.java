@@ -83,6 +83,7 @@ public class ShiroConfiguration {
 		
 		// 配置不会被拦截的链接 顺序判断
 		map.put("/getCode", "anon");
+		map.put("/project/insertOrUpdateByName", "anon");
 		map.put("/static/**", "anon");
 		map.put("/js/**", "anon");
 		map.put("/assets/**", "anon");

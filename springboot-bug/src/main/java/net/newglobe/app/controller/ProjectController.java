@@ -2,6 +2,7 @@ package net.newglobe.app.controller;
 
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -101,6 +102,36 @@ public class ProjectController {
 				t.setCreator(user.getId());
 				t.setUpdator(user.getId());
 				projectService.updateByIdSelective(t);
+			}
+			result.setSuccess(true);
+		} catch (Exception e) {
+			result.setMessage("遇到问题");
+			result.setSuccess(false);
+			logger.error(e.getLocalizedMessage(), e);
+		}
+		return result;
+	}
+	@RequestMapping("insertOrUpdateByName")
+	@ResponseBody
+	public Result insertOrUpdateByName(Project t) {
+		Result result = new Result();
+		try {
+			Date date = new Date();
+			String name = t.getName();
+			if(StringUtils.isNotEmpty(name)) {
+				List<Project> selectList = projectService.selectList(t);
+				if(selectList.size()>0) {
+					Project project = selectList.get(0);
+					t.setId(project.getId());
+					
+					t.setUpdateTime(date);
+					t.setCreateTime(date);
+					projectService.updateByIdSelective(t);
+				}else {
+					t.setUpdateTime(date);
+					t.setCreateTime(date);
+					projectService.insertSelective(t);
+				}
 			}
 			result.setSuccess(true);
 		} catch (Exception e) {

@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"%>
 <%@ include file="../../util/tlds.jsp"%>
 <style>
-	img{
-		height:40px;
-		width:40px;
-	}
+img {
+	height: 40px;
+	width: 40px;
+}
 </style>
 <div class="row">
 	<div class="col-xs-12">
@@ -15,6 +15,17 @@
 				<label class="col-sm-3 control-label no-padding-right" for="form-field-1">项目名称</label>
 				<div class="col-sm-9">
 					<input type="text" id="form-field-1" name="projectName" placeholder="项目名称" class="col-xs-10 ">
+				</div>
+			</div>
+			<div class="form-group col-sm-4">
+				<label class="col-sm-3 control-label no-padding-right" for="form-field-1">所属项目</label>
+				<div class="col-sm-9">
+					<select name="projectId" id="projectId" class="col-xs-10 ">
+						<option value="">请选择</option>
+						<c:forEach items="${projects }" var="project">
+							<option value="${project.id }">${project.name }</option>
+						</c:forEach>
+					</select>
 				</div>
 			</div>
 			<div class="col-sm-4">
@@ -44,6 +55,7 @@
 					<th data-field='state' data-align="center" data-width="20" data-formatter="createIndex">序号</th>
 					<th data-field="projectName" data-align="center" data-sortable="true">项目名称</th>
 					<th data-field="description" data-align="center" data-sortable="true">bug描述</th>
+					<th data-field="state" data-align="center" data-sortable="true" data-formatter='formatState'>状态</th>
 					<th data-field="startTime" data-align="center" data-sortable="true" data-formatter='bootStrapTable.formatDate'>记录日期</th>
 					<th data-field="updateTime" data-align="center" data-sortable="true" data-formatter='bootStrapTable.formatDate'>创建日期</th>
 					<th data-field="id" data-align="center" data-width="80" data-formatter="operateFormatter">操作</th>
@@ -59,6 +71,16 @@
 				+ '" data-rel="tooltip" data-placement="bottom" title="编辑"><i class="ace-icon fa fa-pencil bigger-130"></i></a>'
 		html += '<a class="red" href="javascript:void(0)" onclick="bt1.remove(\'${ctx}/bug/delete\',' + value + ')" title="删除"><i class="ace-icon fa fa-trash-o bigger-130"></i>' + '</a>';
 		return [ html ];
+	}
+
+	function formatState(state) {
+		if (state == 0) {
+			return "未处理"
+		} else if (state == 1) {
+			return "已处理"
+		} else {
+			return "已完成"
+		}
 	}
 
 	function deleteCheckedData() {

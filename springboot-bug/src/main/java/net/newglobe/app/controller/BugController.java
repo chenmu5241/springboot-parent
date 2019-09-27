@@ -39,6 +39,10 @@ public class BugController {
 
 	@RequestMapping(value = "/toList")
 	public String toAccountList(HttpServletRequest request) {
+		Project p = new Project();
+		p.setStatus(1);
+		List<Project> projects = projectService.selectList(p);
+		request.setAttribute("projects", projects);
 		return "app/bug/list";
 	}
 
@@ -75,6 +79,9 @@ public class BugController {
 			Example example = new Example(Project.class);
 			Criteria criteria = example.createCriteria();
 			criteria.andCondition("status=1");
+			if(t.getProjectId()!=null) {
+				criteria.andCondition("project_id="+t.getProjectId());
+			}
 			if(!StringUtils.isEmpty(t.getProjectName())) {
 				criteria.andCondition("project_name like '%" + t.getProjectName() + "%'");
 			}
