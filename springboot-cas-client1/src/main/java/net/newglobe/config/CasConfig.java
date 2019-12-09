@@ -1,5 +1,6 @@
 package net.newglobe.config;
 
+import org.jasig.cas.client.authentication.AuthenticationFilter;
 import org.jasig.cas.client.session.SingleSignOutFilter;
 import org.jasig.cas.client.session.SingleSignOutHttpSessionListener;
 import org.jasig.cas.client.util.HttpServletRequestWrapperFilter;
@@ -13,12 +14,12 @@ import net.unicon.cas.client.configuration.CasClientConfigurerAdapter;
 
 public class CasConfig extends CasClientConfigurerAdapter {
 
-	
-	
+
+
 	private static final String CAS_URL= "https://localhost:8445/cas";
-	 
+
 	private static final String APP_URL= "http://localhost:8083";
- 
+
 	@Bean
 	public ServletListenerRegistrationBean servletListenerRegistrationBean(){
 		ServletListenerRegistrationBean  listenerRegistrationBean = new ServletListenerRegistrationBean();
@@ -26,7 +27,7 @@ public class CasConfig extends CasClientConfigurerAdapter {
 		listenerRegistrationBean.setOrder(Ordered.HIGHEST_PRECEDENCE);
 		return listenerRegistrationBean;
 	}
- 
+
 	/**
 	 * 单点登录退出
 	 * @return
@@ -41,7 +42,7 @@ public class CasConfig extends CasClientConfigurerAdapter {
 		registrationBean.setOrder(2);
 		return registrationBean;
 	}
- 
+
 	/**
 	 * 单点登录认证
 	 * @return
@@ -57,7 +58,7 @@ public class CasConfig extends CasClientConfigurerAdapter {
 		registrationBean.setOrder(3);
 		return registrationBean;
 	}
- 
+
 	/**
 	 * 单点登录校验
 	 * @return
@@ -73,7 +74,7 @@ public class CasConfig extends CasClientConfigurerAdapter {
 		registrationBean.setOrder(4);
 		return registrationBean;
 	}
- 
+
 	/**
 	 * 单点登录请求包装
 	 * @return
@@ -87,7 +88,7 @@ public class CasConfig extends CasClientConfigurerAdapter {
 		registrationBean.setOrder(5);
 		return registrationBean;
 	}
- 
+
 	/**
 	 * 单点登录本地用户信息
 	 * @return

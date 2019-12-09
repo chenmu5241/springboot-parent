@@ -15,19 +15,20 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 
+import net.newglobe.util.CASUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class LocalUserInfoFilter implements Filter {
- 
+
     Logger logger =  LoggerFactory.getLogger(LocalUserInfoFilter.class);
- 
+
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
- 
+
     }
- 
+
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         HttpServletRequest request_ = (HttpServletRequest)request;
@@ -36,12 +37,12 @@ public class LocalUserInfoFilter implements Filter {
             logger.info("访问者 ：" +loginName);
             request_.getSession().setAttribute("loginName", loginName);
         }
- 
+
         chain.doFilter(request, response);
     }
- 
+
     @Override
     public void destroy() {
- 
+
     }
 }

@@ -2,7 +2,6 @@ package net.newglobe.app.controller;
 
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
-import java.security.Principal;
 
 import javax.imageio.ImageIO;
 import javax.servlet.ServletOutputStream;
@@ -12,15 +11,13 @@ import javax.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.google.code.kaptcha.impl.DefaultKaptcha;
-
-import net.newglobe.app.model.SysAccount;
 
 @Controller
 public class LoginController {
@@ -29,9 +26,15 @@ public class LoginController {
 	
 	@Autowired
     private DefaultKaptcha captchaProducer;
+	@Autowired
+    private RedisTemplate<String,Object> redisTemplate;
 
 	@RequestMapping(value = "/login")
 	public String login(HttpServletResponse response, HttpServletRequest request,Authentication authentication) {
+		System.out.println(redisTemplate);
+		
+		ValueOperations<String, Object> opsForValue = redisTemplate.opsForValue();
+		
 		if(authentication!=null) {
 			Object obj = authentication.getPrincipal();
 			System.out.println(obj);

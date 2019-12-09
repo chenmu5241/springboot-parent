@@ -119,11 +119,15 @@ public class ProjectController {
 			Date date = new Date();
 			String name = t.getName();
 			if(StringUtils.isNotEmpty(name)) {
-				List<Project> selectList = projectService.selectList(t);
+
+				Project tmp = new Project();
+				tmp.setName(t.getName());
+				tmp.setUrl(t.getUrl());
+				List<Project> selectList = projectService.selectList(tmp);
 				if(selectList.size()>0) {
 					Project project = selectList.get(0);
 					t.setId(project.getId());
-					
+
 					t.setUpdateTime(date);
 					t.setCreateTime(date);
 					projectService.updateByIdSelective(t);
