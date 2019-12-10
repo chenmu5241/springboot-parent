@@ -11,7 +11,7 @@
   <packaging>war</packaging>
   <name>springboot-cas-center Maven Webapp</name>
   <url>http://maven.apache.org</url>
-  
+
   <!-- 此处相当于继承自springboot -->
 	<dependencyManagement>
 		<dependencies>
@@ -187,7 +187,7 @@
 					<source>${java.version}</source> <!-- 源代码使用的JDK版本 -->
 					<target>${java.version}</target> <!-- 需要生成的目标class文件的编译版本 -->
 					<encoding>UTF-8</encoding><!-- 字符集编码 -->
-					<skipTests>true</skipTests><!-- 跳过测试 -->
+					<!--<skipTests>true</skipTests>--><!-- 跳过测试 -->
 				</configuration>
 			</plugin>
 			<plugin>
@@ -209,8 +209,8 @@
 				</executions>
 			</plugin>
 		</plugins>
-		
-		<resources> 
+
+		<resources>
             <resource>
                 <!-- ⭐️JSP包打包到资源里 -->
                 <directory>src/main/webapp</directory>
@@ -228,7 +228,7 @@
                 <filtering>false</filtering>
             </resource>
         </resources>
-		
+
 	</build>
-  
+
 </project>
